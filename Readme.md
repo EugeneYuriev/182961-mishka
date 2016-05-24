@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Евгений Юрьев](https://up.htmlacademy.ru/adaptive/7/user/182961).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Петров] (https://htmlacademy.ru/profile/id42390).
 
 ---
 
