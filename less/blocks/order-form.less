@@ -1,0 +1,165 @@
+.order-form {
+
+  margin-bottom: 58px;
+
+
+
+  &__intro {
+    line-height: 25px;
+  }
+
+  &__param-group {
+    margin: 0;
+    padding: 0;
+
+    outline: none;
+    border: none;
+    border-top: 1px solid @ui-color-green;
+
+  }
+
+  &__param-group-title {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-right: 30px;
+
+    font-size: 17px;
+    font-weight: 700;
+    color: @ui-color-green;
+    text-transform: uppercase;
+  }
+
+  &__radio-label,
+  &__checkbox-label {
+    position: relative;
+
+    display: block;
+    margin-bottom: 36px;
+    padding-left: 64px;
+
+    font-size: 17px;
+    line-height: 19px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    // outline: 1px solid green;
+  }
+
+  &__radio-label::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__checkbox-label::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid #000000;
+    cursor: pointer;
+  }
+
+  &__radio-input,
+  &__checkbox-input {
+    display: none;
+  }
+
+  &__radio-input:checked + &__radio-label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+
+    width: 17px;
+    height: 17px;
+
+    background: @ui-color-green;
+    border-radius: 50%;
+  }
+
+  &__checkbox-input:checked + &__checkbox-label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+
+    width: 25px;
+    height: 25px;
+
+    background: #ffffff url("../img/icon-tick.svg") no-repeat;
+  }
+
+  &__label {
+    display: block;
+
+    font-size: 17px;
+    line-height: 19px;
+    font-weight: 700;
+
+    // outline: 1px solid green;
+  }
+
+  &__input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    font-size: 17px;
+    line-height: 19px;
+
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #000000;
+
+    // outline: 1px solid green;
+  }
+
+  &__input-tel {
+    padding-top: 0;
+
+    background: #ffffff url("../img/icon-phone.svg") no-repeat;
+    background-position-x: right;
+  }
+
+  &__input-email {
+    padding-top: 0;
+
+    background: #ffffff url("../img/icon-mail.svg") no-repeat;
+    background-position-x: right;
+  }
+
+  &__input--text {
+    display: block;
+    margin-bottom: 57px;
+    padding: 16px;
+
+    border: 2px solid #000000;
+  }
+
+  &__order-btn {
+    display: block;
+    width: 100%;
+  }
+}

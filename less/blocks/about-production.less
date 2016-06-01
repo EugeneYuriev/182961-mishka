@@ -1,0 +1,58 @@
+.about-production {
+  margin-bottom: 58px;
+  outline: 1px solid #ececec;
+
+
+
+  &__title {
+    width: 170px;
+    padding: 26px 0;
+    padding-left: 90px;
+    text-align: left;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+
+    background: #ffffff url("../img/icon-video.svg") no-repeat;
+    background-position-x: 35px;
+    background-position-y: center;
+  }
+
+  &__clip {
+    position: relative;
+
+    margin-bottom: 30px;
+  }
+
+// не понимаю, почему не отображается?
+  &__clip::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+    width: 105px;
+    height: 78px;
+
+    background: #000000 url("../img/icon-play.svg") no-repeat;
+  }
+
+  &__intro {
+    margin-bottom: 25px;
+    padding-left: 24px;
+    padding-right: 44px;
+
+    line-height: 24px;
+  }
+
+  &__order-btn {
+    margin: 0 24px;
+    // Почему не срабатывает отступ?
+    margin-bottom: 30px;
+  }
+}
