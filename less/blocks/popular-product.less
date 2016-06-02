@@ -7,11 +7,11 @@
   .reset-marg-pad();
   margin-bottom: 12px;
 
-  .set-font-params(24px, 30px, 700);
+  .set-font-params(@font-family__header, @font-size__large, 30px, 700);
 }
 
 .popular-product__slogan {
-  .set-font-params(16px, 16px, 700);
+  .set-font-params("Open Sans Bold", @font-size__bigger, 16px, 400);
   color: @ui-color-green;
   text-transform: uppercase;
 }
@@ -43,6 +43,6 @@
   display: block;
   padding: 26px 0;
 
-  .set-font-params(16px, 24px, 700);
+  .set-font-params(@font-family__header, @font-size__big, 24px, 700);
   text-align: center;
 }

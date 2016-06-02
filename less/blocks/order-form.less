@@ -21,7 +21,7 @@
   margin-bottom: 30px;
   padding-right: 30px;
 
-  .set-font-params(17px, 17px, 700);
+  .set-font-params("Open Sans Bold", 17px, 17px, 400);
   color: @ui-color-green;
   text-transform: uppercase;
 }
@@ -34,9 +34,7 @@
   margin-bottom: 36px;
   padding-left: 64px;
 
-  font-size: 17px;
-  line-height: 19px;
-  font-weight: 700;
+  .set-font-params(@font-family__header, 17px, 19px, 700);
 
   cursor: pointer;
 }
@@ -44,10 +42,9 @@
 .order-form__radio-label::before {
   .abs-centrateY();
 
-  width: 40px;
-  height: 40px;
+  .set-size(40px, 40px);
 
-  border: 2px solid #000000;
+  border: 2px solid @border-color;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -55,10 +52,9 @@
 .order-form__checkbox-label::before {
   .abs-centrateY();
 
-  width: 40px;
-  height: 40px;
+  .set-size(40px, 40px);
 
-  border: 2px solid #000000;
+  border: 2px solid @border-color;
   cursor: pointer;
 }
 
@@ -71,8 +67,7 @@
   .abs-centrateY();
   left: 14px;
 
-  width: 17px;
-  height: 17px;
+  .set-size(17px, 17px);
 
   background: @ui-color-green;
   border-radius: 50%;
@@ -82,8 +77,7 @@
   .abs-centrateY();
   left: 10px;
 
-  width: 25px;
-  height: 25px;
+  .set-size(25px, 25px);
 
   background: #ffffff url("../img/icon-tick.svg") no-repeat;
 }
@@ -91,7 +85,7 @@
 .order-form__label {
   display: block;
 
-  .set-font-params(17px, 19px, 700);
+  .set-font-params(@font-family__header, 17px, 19px, 700);
 }
 
 .order-form__input {
@@ -102,19 +96,18 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  .set-font-params(17px, 19px, 400);
+  .set-font-params(@font-family__header, 17px, 19px, 400);
 
   outline: none;
   border: none;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid @border-color;
 
 
   &--text {
-    display: block;
     margin-bottom: 57px;
     padding: 16px;
 
-    border: 2px solid #000000;
+    border: 2px solid @border-color;
   }
 }
 
@@ -133,6 +126,5 @@
 }
 
 .order-form__order-btn {
-  display: block;
   width: 100%;
 }

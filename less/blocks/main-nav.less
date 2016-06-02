@@ -6,11 +6,10 @@
 }
 
 .main-nav__list {
-  margin: 0;
-  padding: 0;
+  .reset-marg-pad();
 
   list-style: none;
-  .set-font-params(16px, 16px, 700);
+  .set-font-params(@font-family__header, @font-size__big, 16px, 700);
 }
 
 .main-nav__item {
@@ -28,7 +27,7 @@
   position: relative;
 
   text-decoration: none;
-  color: #000000;
+  color: @font-color__base;
 
   &--search::before,
   &--cart::before {
@@ -38,8 +37,7 @@
     left: -40px;
 
     display: block;
-    width: 20px;
-    height: 20px;
+    .set-size(20px, 20px);
 
     background: #ffffff url("../img/icon-search.svg") no-repeat;
   }

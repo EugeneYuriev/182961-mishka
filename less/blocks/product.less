@@ -13,14 +13,14 @@
 }
 
 .product__name {
-  .set-font-params(16px, 24px, 700);
+  .set-font-params(@font-family__header, @font-size__big, 24px, 700);
 
   text-align: left;
 }
 
 .product__name a {
   text-decoration: none;
-  color: #000000;
+  color: @font-color__base;
 }
 
 .product__params {
@@ -38,14 +38,13 @@
   vertical-align: top;
   margin-bottom: 27px;
 
-  .set-font-params(14px, 24px, 700);
+  .set-font-params(@font-family__header, @font-size__normal, 24px, 700);
 }
 
 .product__buy-btn {
   display: inline-block;
   vertical-align: top;
-  width: 20px;
-  height: 20px;
+  .set-size(20px, 20px);
   margin-left: 50%;
 
   font-size: 0;

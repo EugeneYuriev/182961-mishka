@@ -12,7 +12,7 @@
   padding-left: 90px;
   text-align: left;
 
-  .set-font-params(16px, 24px, 700);
+  .set-font-params(@font-family__header, @font-size__big, 24px, 700);
 
   background: url("../img/icon-video.svg") no-repeat;
   background-position-x: 35px;
@@ -22,18 +22,16 @@
 .about-production__clip {
   position: relative;
 
-  width: 260px;
-  height: 150px;
+  .set-size(260px, 150px);
   margin-bottom: 30px;
 
   background: #b2aead url("../img/video-mobile@1x.jpg") no-repeat;
 }
 
-.about-production__clip::before {
+.about-production__clip-play {
   .abs-centrate();
 
-  width: 105px;
-  height: 78px;
+  .set-size(105px, 78px);
 
   background: #000000 url("../img/icon-play.svg") no-repeat;
   cursor: pointer;
@@ -48,6 +46,5 @@
 }
 
 .about-production__order-btn {
-  margin: 0 24px;
-  margin-bottom: 30px;
+  margin: 0 24px 30px;
 }
