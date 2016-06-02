@@ -1,0 +1,44 @@
+.site-wrapper() {
+  margin: 0 auto;
+  padding: 0;
+  width: 320px;
+}
+
+.content-wrapper() {
+  margin: 0 30px;
+}
+
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.abs-centrate() {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.abs-centrateY() {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.reset-marg-pad() {
+  margin: 0;
+  padding: 0;
+}
+
+.set-font-params(@font-size; @line-height; @font-weight) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+}
