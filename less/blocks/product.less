@@ -28,7 +28,7 @@
   margin-bottom: 13px;
   padding-bottom: 20px;
 
-  line-height: 30px;
+  .set-font-params(@font-family-header, @font-size-normal, 30px, 400);
   color: #444444;
 
   border-bottom: 1px solid #ededed;
@@ -53,4 +53,31 @@
   text-align: right;
   background: #ffffff url("../img/icon-cart.svg") no-repeat;
   background-position: right;
+}
+
+@media @tablet-widths {
+  .product {
+    .clearfix();
+  }
+
+  .product__link {
+    float: left;
+  }
+
+  .product__data {
+    float: right;
+    width: 270px;
+  }
+
+  .product__name {
+    .set-font-params(@font-family-header, @tablet-font-size-big, 24px, 700);
+  }
+
+  .product__params {
+    padding-bottom: 180px;
+  }
+
+  .product__price {
+    .set-font-params(@font-family-header, @tablet-font-size-normal, 24px, 700);
+  }
 }

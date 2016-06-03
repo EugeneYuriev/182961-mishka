@@ -4,7 +4,7 @@
 
 .contacts__title {
   .reset-marg-pad();
-  .content-wrapper();
+  .content-wrapper(@mobile-margin-lr);
   margin-bottom: 36px;
 
   .set-font-params(@font-family-header, @font-size-large, 30px, 700);
@@ -20,5 +20,43 @@
 }
 
 .contacts__btn {
-  .content-wrapper();
+  .content-wrapper(@mobile-margin-lr);
+}
+
+@media @tablet-widths {
+  .contacts {
+    position: relative;
+    .clearfix();
+
+    margin-bottom: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: 50px;
+
+      width: 50px;
+      height: 90px;
+
+      background: #ffffff url("../img/icon-flag.svg") no-repeat;
+    }
+  }
+
+  .contacts__title {
+    .content-wrapper(@tablet-margin-lr);
+    margin-bottom: 65px;
+
+    .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
+  }
+
+  // не пойму, почему карта наползает?
+  .contacts__map {
+    width: 100%;
+  }
+
+  .contacts__btn {
+    width: 230px;
+    margin: 0 auto;
+  }
 }

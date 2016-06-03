@@ -32,3 +32,20 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+@media @tablet-widths {
+  .shop-catalog {
+    .content-wrapper(@tablet-margin-lr);
+    margin-bottom: 50px;
+    
+    font-size: 0;
+  }
+
+  .shop-catalog__entry-link {
+    display: inline-block;
+    width: 50%;
+
+    .set-font-params("Tahoma", @tablet-font-size-bigger, 30px, 700);
+  }
+
+}

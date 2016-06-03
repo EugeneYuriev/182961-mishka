@@ -1,5 +1,5 @@
 .contacts-email {
-  .content-wrapper();
+  .content-wrapper(@mobile-margin-lr);
   margin-bottom: 35px;
 }
 
@@ -16,4 +16,13 @@
   display: inline-block;
   vertical-align: top;
   border-bottom: 1px solid @ui-color-green;
+}
+
+@media @tablet-widths {
+  .contacts-email {
+    float: left;
+    width: 40%;
+    .reset-marg-pad();
+    margin-left: @tablet-margin-lr;
+  }
 }

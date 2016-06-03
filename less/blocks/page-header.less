@@ -1,6 +1,6 @@
 .page-header {
   box-sizing: border-box;
-  .site-wrapper();
+  .site-wrapper(@mobile-width);
   padding: 0;
 
   border-top: 1px solid @ui-color-grey;
@@ -32,4 +32,39 @@
 
   border: none;
   background: transparent url("../img/icon-menu-open.svg") no-repeat;
+}
+
+@media @tablet-widths {
+  .page-header {
+    position: relative;
+
+    .clearfix();
+    .site-wrapper(@tablet-width);
+
+    &:before {
+      content: "Бесплатная доставка по России";
+      position: absolute;
+      right: @tablet-margin-lr;
+      bottom: -50px;
+
+      .set-font-params(@font-family-header, @font-size-normal, 24px, 400);
+      color: #444444;
+    }
+
+  }
+
+  .page-header__logo {
+    float: left;
+    padding-left: @tablet-margin-lr;
+
+    border-bottom: none;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+@media @desktop-widths {
+
 }

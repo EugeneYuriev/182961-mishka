@@ -1,3 +1,9 @@
 .product-catalog {
-  .content-wrapper();
+  .content-wrapper(@mobile-margin-lr);
+}
+
+@media @tablet-widths {
+  .product-catalog {
+    .content-wrapper(@tablet-margin-lr);
+  }
 }

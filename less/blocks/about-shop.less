@@ -1,5 +1,5 @@
 .about-shop {
-  .content-wrapper();
+  .content-wrapper(@mobile-margin-lr);
 }
 
 .about-shop__title {
@@ -41,5 +41,24 @@
 
   &--feature-6 {
     background: url("../img/icon-feature-6.svg") 10px 35px no-repeat;
+  }
+}
+
+@media @tablet-widths {
+  .about-shop {
+    .content-wrapper(@tablet-margin-lr);
+  }
+
+  .about-shop__title {
+    .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
+  }
+
+  .about-shop__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 320px;
+    padding-bottom: 50px;
+
+    font-size: @tablet-font-size-bigger;
   }
 }

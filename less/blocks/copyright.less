@@ -11,11 +11,19 @@
   text-decoration: none;
   color: @font-color-base;
   .set-font-params(@font-family-header, @font-size-bigger, 18px, 700);
-
 }
 
 .copyright__logo {
   display: inline-block;
   vertical-align: top;
   padding-left: 20px;
+}
+
+@media @tablet-widths {
+  .copyright {
+    float: right;
+    width: 200px;
+    padding: 60px 0;
+    margin-right: @tablet-margin-lr;
+  }
 }

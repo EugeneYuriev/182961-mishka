@@ -1,5 +1,5 @@
 .order-form {
-  .content-wrapper();
+  .content-wrapper(@mobile-margin-lr);
   margin-bottom: 58px;
 }
 
@@ -79,7 +79,7 @@
 
   .set-size(25px, 25px);
 
-  background: #ffffff url("../img/icon-tick.svg") no-repeat;
+  background: transparent url("../img/icon-tick.svg") no-repeat;
 }
 
 .order-form__label {
@@ -109,22 +109,124 @@
 
     border: 2px solid @border-color;
   }
-}
 
-.order-form__input-tel {
-  padding-top: 0;
+  &--tel,
+  &--email {
+    padding-top: 0;
 
-  background: #ffffff url("../img/icon-phone.svg") no-repeat;
-  background-position-x: right;
-}
+    background: #ffffff url("../img/icon-phone.svg") no-repeat;
+    background-position-x: right;
+  }
 
-.order-form__input-email {
-  padding-top: 0;
-
-  background: #ffffff url("../img/icon-mail.svg") no-repeat;
-  background-position-x: right;
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+  }
 }
 
 .order-form__order-btn {
   width: 100%;
+}
+
+@media @tablet-widths {
+  .order-form {
+    position: relative;
+
+    .reset-marg-pad();
+    margin-bottom: 58px;
+
+    &::after {
+      content: "Все поля являются обязательными";
+      position: absolute;
+      bottom: 20px;
+      right: 50px;
+
+      .set-font-params(@font-family-plain-text, @tablet-font-size-normal, 30px, 400);
+      color: #444444;
+
+    }
+  }
+
+  .order-form__param-group {
+    position: relative;
+
+    width: auto;
+    padding-top: 60px;
+    padding-left: 160px;
+    padding-bottom: 40px;
+
+    border: none;
+  }
+
+  .order-form__param-group:nth-child(5){
+    padding-bottom: 0;
+  }
+
+  .order-form__param-group:nth-child(1),
+  .order-form__param-group:nth-child(3),
+  .order-form__param-group:nth-child(5),
+  .order-form__param-group:nth-child(6) {
+    background: @headline-color;
+  }
+
+  .order-form__param-group-title {
+    position: absolute;
+    left: 50px;
+    top: 60px;
+  }
+
+  .order-form__radio-label {
+    margin-bottom: 50px;
+
+    .set-font-params(@font-family-header, @tablet-font-size-big, 18px, 700);
+  }
+
+  .order-form__checkbox-label {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin-bottom: 50px;
+
+    .set-font-params(@font-family-header, @tablet-font-size-big, 18px, 700);
+  }
+
+  .order-form__label {
+    display: inline-block;
+
+    .set-font-params(@font-family-header, @tablet-font-size-big, 18px, 700);
+  }
+
+// Не знаю, как растянуть input в ФИО?
+  .order-form__input {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 450px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+
+    background-color: transparent;
+
+    &--tel,
+    &--email {
+      width: 100%;
+      margin-left: 0;
+      // почему не срабатывает margin?
+      margin-right: 50px;
+
+      background-position-x: 95%;
+    }
+
+    &--text {
+      width: 100%;
+      margin-left: 0;
+      // почему не срабатывает margin?
+      margin-right: 50px;
+    }
+  }
+
+  .order-form__order-btn {
+    width: 230px;
+  }
+
+
 }

@@ -1,4 +1,26 @@
 .page-footer {
-  .site-wrapper();
+  .site-wrapper(@mobile-width);
   background: @headline-color;
+}
+
+@media @tablet-widths {
+  .page-footer {
+    position: relative;
+
+    .site-wrapper(@tablet-width);
+    .clearfix();
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 50px;
+
+    width: 90px;
+    height: 40px;
+
+    background: @headline-color url("../img/logo-mobile.svg") no-repeat;
+  }
+
+  }
 }
