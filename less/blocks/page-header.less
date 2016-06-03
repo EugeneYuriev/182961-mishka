@@ -1,0 +1,35 @@
+.page-header {
+  box-sizing: border-box;
+  .site-wrapper();
+  padding: 0;
+
+  border-top: 1px solid @ui-color-grey;
+  border-bottom: 1px solid @ui-color-grey;
+
+  text-align: center;
+}
+
+.page-header__logo {
+  position: relative;
+
+  display: block;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 20px 0;
+
+  border-top: 1px solid @ui-color-grey;
+  border-bottom: 1px solid @ui-color-grey;
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-30%);
+
+  .set-size(40px, 40px);
+  .reset-marg-pad();
+
+  border: none;
+  background: transparent url("../img/icon-menu-open.svg") no-repeat;
+}

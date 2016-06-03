@@ -1,0 +1,130 @@
+.order-form {
+  .content-wrapper();
+  margin-bottom: 58px;
+}
+
+.order-form__intro {
+  line-height: 25px;
+}
+
+.order-form__param-group {
+  .reset-marg-pad();
+
+  outline: none;
+  border: none;
+  border-top: 1px solid @ui-color-green;
+
+}
+
+.order-form__param-group-title {
+  .reset-marg-pad();
+  margin-bottom: 30px;
+  padding-right: 30px;
+
+  .set-font-params(@font-family-plain-text, 17px, 17px, 700);
+  color: @ui-color-green;
+  text-transform: uppercase;
+}
+
+.order-form__radio-label,
+.order-form__checkbox-label {
+  position: relative;
+
+  display: block;
+  margin-bottom: 36px;
+  padding-left: 64px;
+
+  .set-font-params(@font-family-header, 17px, 19px, 700);
+
+  cursor: pointer;
+}
+
+.order-form__radio-label::before {
+  .abs-centrateY();
+
+  .set-size(40px, 40px);
+
+  border: 2px solid @border-color;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.order-form__checkbox-label::before {
+  .abs-centrateY();
+
+  .set-size(40px, 40px);
+
+  border: 2px solid @border-color;
+  cursor: pointer;
+}
+
+.order-form__radio-input,
+.order-form__checkbox-input {
+  display: none;
+}
+
+.order-form__radio-input:checked + .order-form__radio-label::after {
+  .abs-centrateY();
+  left: 14px;
+
+  .set-size(17px, 17px);
+
+  background: @ui-color-green;
+  border-radius: 50%;
+}
+
+.order-form__checkbox-input:checked + .order-form__checkbox-label::after {
+  .abs-centrateY();
+  left: 10px;
+
+  .set-size(25px, 25px);
+
+  background: #ffffff url("../img/icon-tick.svg") no-repeat;
+}
+
+.order-form__label {
+  display: block;
+
+  .set-font-params(@font-family-header, 17px, 19px, 700);
+}
+
+.order-form__input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .set-font-params(@font-family-header, 17px, 19px, 400);
+
+  outline: none;
+  border: none;
+  border-bottom: 2px solid @border-color;
+
+
+  &--text {
+    margin-bottom: 57px;
+    padding: 16px;
+
+    border: 2px solid @border-color;
+  }
+}
+
+.order-form__input-tel {
+  padding-top: 0;
+
+  background: #ffffff url("../img/icon-phone.svg") no-repeat;
+  background-position-x: right;
+}
+
+.order-form__input-email {
+  padding-top: 0;
+
+  background: #ffffff url("../img/icon-mail.svg") no-repeat;
+  background-position-x: right;
+}
+
+.order-form__order-btn {
+  width: 100%;
+}

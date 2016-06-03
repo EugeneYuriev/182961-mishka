@@ -1,0 +1,50 @@
+.about-production {
+  .content-wrapper();
+  margin-bottom: 58px;
+  outline: 1px solid @ui-color-grey;
+  .clearfix();
+}
+
+.about-production__title {
+  width: 170px;
+  padding: 26px 0;
+  padding-left: 90px;
+  text-align: left;
+
+  .set-font-params(@font-family-header, @font-size-big, 24px, 700);
+
+  background: url("../img/icon-video.svg") no-repeat;
+  background-position-x: 35px;
+  background-position-y: center;
+}
+
+.about-production__clip {
+  position: relative;
+
+  .set-size(260px, 150px);
+  margin-bottom: 30px;
+
+  background: #b2aead url("../img/video-mobile@1x.jpg") no-repeat;
+}
+
+.about-production__clip-play {
+  .abs-centrate();
+
+  .set-size(105px, 78px);
+
+  background: #000000 url("../img/icon-play.svg") no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.about-production__intro {
+  margin-bottom: 25px;
+  padding-left: 24px;
+  padding-right: 44px;
+
+  line-height: 24px;
+}
+
+.about-production__order-btn {
+  margin: 0 24px 30px;
+}
