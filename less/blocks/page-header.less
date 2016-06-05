@@ -34,23 +34,16 @@
   background: transparent url("../img/icon-menu-open.svg") no-repeat;
 }
 
+.page-header__delivery-info {
+  display: none;
+}
+
 @media @tablet-widths {
   .page-header {
     position: relative;
 
     .clearfix();
     .site-wrapper(@tablet-width);
-
-    &:before {
-      content: "Бесплатная доставка по России";
-      position: absolute;
-      right: @tablet-margin-lr;
-      bottom: -50px;
-
-      .set-font-params(@font-family-header, @font-size-normal, 24px, 400);
-      color: #444444;
-    }
-
   }
 
   .page-header__logo {
@@ -62,6 +55,16 @@
 
   .page-header__toggle {
     display: none;
+  }
+
+  .page-header__delivery-info {
+    display: block;
+    float: right;
+    margin-bottom: -100px;
+    margin-right: @tablet-margin-lr;
+
+    .set-font-params(@font-family-header, @font-size-normal, 80px, 400);
+    color: #444444;
   }
 }
 

@@ -3,24 +3,21 @@
   background: @headline-color;
 }
 
+.page-footer__logo {
+  display: none;
+}
+
 @media @tablet-widths {
   .page-footer {
     position: relative;
 
     .site-wrapper(@tablet-width);
     .clearfix();
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 45px;
-    left: 50px;
-
-    width: 90px;
-    height: 40px;
-
-    background: @headline-color url("../img/logo-mobile.svg") no-repeat;
   }
 
+  .page-footer__logo {
+    display: block;
+    float: left;
+    margin: 50px;
   }
 }

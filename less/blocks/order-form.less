@@ -127,33 +127,21 @@
   width: 100%;
 }
 
+.order-form__requirement {
+  display: none;
+}
+
 @media @tablet-widths {
   .order-form {
-    position: relative;
-
     .reset-marg-pad();
     margin-bottom: 58px;
-
-    &::after {
-      content: "Все поля являются обязательными";
-      position: absolute;
-      bottom: 20px;
-      right: 50px;
-
-      .set-font-params(@font-family-plain-text, @tablet-font-size-normal, 30px, 400);
-      color: #444444;
-
-    }
   }
 
   .order-form__param-group {
-    position: relative;
-
-    width: auto;
     padding-top: 60px;
-    padding-left: 160px;
     padding-bottom: 40px;
 
+    .clearfix();
     border: none;
   }
 
@@ -169,20 +157,21 @@
   }
 
   .order-form__param-group-title {
-    position: absolute;
-    left: 50px;
-    top: 60px;
+    float: left;
+    width: 60px;
+    padding-left: 50px;
   }
 
   .order-form__radio-label {
+    float: right;
+    width: 470px;
     margin-bottom: 50px;
 
     .set-font-params(@font-family-header, @tablet-font-size-big, 18px, 700);
   }
 
   .order-form__checkbox-label {
-    display: inline-block;
-    vertical-align: top;
+    float: right;
     width: 200px;
     margin-bottom: 50px;
 
@@ -190,14 +179,16 @@
   }
 
   .order-form__label {
-    display: inline-block;
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+    padding: 20px;
 
-    .set-font-params(@font-family-header, @tablet-font-size-big, 18px, 700);
+    .set-font-params(@font-family-header, @tablet-font-size-big, 18px, 700);    
   }
 
-// Не знаю, как растянуть input в ФИО?
   .order-form__input {
-    display: inline-block;
+    float: right;
     box-sizing: border-box;
     width: 450px;
     margin-left: 20px;
@@ -208,18 +199,18 @@
 
     &--tel,
     &--email {
-      width: 100%;
+      float: right;
+      width: 500px;
       margin-left: 0;
-      // почему не срабатывает margin?
       margin-right: 50px;
 
       background-position-x: 95%;
     }
 
     &--text {
-      width: 100%;
+      float: right;
+      width: 470px;
       margin-left: 0;
-      // почему не срабатывает margin?
       margin-right: 50px;
     }
   }
@@ -228,5 +219,13 @@
     width: 230px;
   }
 
+  .order-form__requirement {
+    display: block;
+    float: right;
+    margin-right: 50px;
+
+    .set-font-params(@font-family-plain-text, @tablet-font-size-normal, 30px, 400);
+    color: #444444;
+  }
 
 }

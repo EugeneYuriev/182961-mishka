@@ -34,7 +34,7 @@
   .set-size(260px, 150px);
   margin-bottom: 30px;
 
-  background: #b2aead url("../img/video-mobile@1x.jpg") no-repeat;
+  background: #000000 url("../img/video-mobile@1x.jpg") no-repeat;
 }
 
 .about-production__clip-play {
@@ -68,23 +68,25 @@
   }
 
   .about-production__title {
+    position: absolute;
+    bottom: 150px;
     width: 100%;
-    padding-top: 480px;
 
     .set-font-params(@font-family-header, @tablet-font-size-big, 24px, 700);
 
     &:before {
-      top: 470px;
       left: 30px;
+      top: 20px;
     }
   }
 
   .about-production__clip {
-    position: absolute;
-    top: 0;
-
     width: 100%;
     height: 457px;
+  }
+
+  .about-production__intro {
+    padding-top: 80px;
   }
 
 }
