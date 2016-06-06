@@ -1,5 +1,5 @@
 .references {
-  .content-wrapper();
+  .content-wrapper(@mobile-margin-lr);
   margin-bottom: 92px;
 }
 
@@ -53,5 +53,74 @@
   &--next {
     background: #ffffff url("../img/icon-right-arrow.svg") no-repeat;
     background-position: center;
+  }
+}
+
+@media @tablet-widths {
+  .references {
+    position: relative;
+    .clearfix();
+
+    .reset-marg-pad();
+    margin-bottom: 150px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    background: #ffffff url("../img/review@1x.jpg") no-repeat;
+    background-position: left;
+  }
+
+  .references__header {
+    padding-left: 50px;
+
+    .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
+  }
+
+  .references__item {
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .references__write-btn {
+    width: 175px;
+  }
+
+  .references__item-author {
+    width: 300px;
+
+    font-size: @tablet-font-size-big;
+  }
+
+  .references__controls {
+    position: absolute;
+    bottom: 120px;
+    right: 0;
+
+    width: 180px;
+  }
+
+  .references__toggle {
+    border: none;
+  }
+
+}
+
+@media @desktop-widths {
+  .references {
+    .content-wrapper(@desktop-margin-lr);
+    margin-bottom: 150px;
+  }
+
+  .references__header {
+    margin-left: 125px;
+  }
+
+  .references__item {
+    width: 700px;
+    margin-left: 125px;
+  }
+
+  .references__write-btn {
+    float: right;
   }
 }

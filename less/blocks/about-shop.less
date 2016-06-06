@@ -1,5 +1,5 @@
 .about-shop {
-  .content-wrapper();
+  .content-wrapper(@mobile-margin-lr);
 }
 
 .about-shop__title {
@@ -20,26 +20,60 @@
   padding-top: 95px;
 
   &--feature-1 {
-    background: url("../img/icon-feature-1.svg") 10px 35px no-repeat;
+    background: url("../img/icon-feature-flower.svg") 10px 35px no-repeat;
   }
 
   &--feature-2 {
-    background: url("../img/icon-feature-2.svg") 10px 35px no-repeat;
+    background: url("../img/icon-feature-threads.svg") 10px 35px no-repeat;
   }
 
   &--feature-3 {
-    background: url("../img/icon-feature-3.svg") 10px 35px no-repeat;
+    background: url("../img/icon-feature-rectangle.svg") 10px 35px no-repeat;
   }
 
   &--feature-4 {
-    background: url("../img/icon-feature-4.svg") 10px 35px no-repeat;
+    background: url("../img/icon-feature-rocket.svg") 10px 35px no-repeat;
   }
 
   &--feature-5 {
-    background: url("../img/icon-feature-5.svg") 10px 35px no-repeat;
+    background: url("../img/icon-feature-heart.svg") 10px 35px no-repeat;
   }
 
   &--feature-6 {
-    background: url("../img/icon-feature-6.svg") 10px 35px no-repeat;
+    background: url("../img/icon-feature-gift.svg") 10px 35px no-repeat;
+  }
+}
+
+@media @tablet-widths {
+  .about-shop {
+    .content-wrapper(@tablet-margin-lr);
+  }
+
+  .about-shop__title {
+    .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
+  }
+
+  .about-shop__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 320px;
+    padding-bottom: 50px;
+
+    font-size: @tablet-font-size-bigger;
+  }
+}
+
+@media @desktop-widths {
+  .about-shop {
+    .content-wrapper(@desktop-margin-lr);
+  }
+
+  .about-shop__title {
+    .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
+    margin-left: 175px;
+  }
+
+  .about-shop__list {
+    margin-left: 175px;
   }
 }

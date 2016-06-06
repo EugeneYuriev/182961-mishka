@@ -1,4 +1,29 @@
 .page-footer {
-  .site-wrapper();
+  .site-wrapper(@mobile-width);
   background: @headline-color;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media @tablet-widths {
+  .page-footer {
+    position: relative;
+
+    .site-wrapper(@tablet-width);
+    .clearfix();
+  }
+
+  .page-footer__logo {
+    display: block;
+    float: left;
+    margin: 50px;
+  }
+}
+
+@media @desktop-widths {
+  .page-footer {
+    .site-wrapper(@desktop-width);
+  }
 }

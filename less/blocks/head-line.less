@@ -14,3 +14,30 @@
     background: @headline-color;
   }
 }
+
+@media @tablet-widths {
+  .head-line {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+
+    .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
+
+    &--index {
+      min-height: 470px;
+      padding-top: 150px;
+    }
+
+    &--inner-page {
+      width: 100%;
+      margin-bottom: 80px;
+      padding-top: 120px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .head-line {
+    .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
+  }
+}

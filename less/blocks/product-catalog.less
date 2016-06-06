@@ -1,3 +1,16 @@
 .product-catalog {
-  .content-wrapper();
+  .content-wrapper(@mobile-margin-lr);
+}
+
+@media @tablet-widths {
+  .product-catalog {
+    .content-wrapper(@tablet-margin-lr);
+  }
+}
+
+@media @desktop-widths {
+  .product-catalog {
+    .content-wrapper(@desktop-margin-lr);
+    font-size: 0;
+  }
 }
