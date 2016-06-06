@@ -59,35 +59,19 @@
     .clearfix();
   }
 
-  .main-nav__list {
-    float: right;
-  }
-
   .main-nav__item {
-    display: inline-block;
-    padding-left: 70px;
+    float: left;
+    padding-left: 10px;
 
     border-bottom: none;
     border-left: 1px solid @ui-color-grey;
   }
 
-  .main-nav__item:nth-child(1),
-  .main-nav__item:nth-child(2) {
-    position: absolute;
-    bottom: -80px;
-    left: 0;
-    // margin-top: -80px;
-
-    border-left: none;
-  }
-
-  .main-nav__item:nth-child(2) {
-    left: 180px;
-  }
-
   .main-nav__item-link {
     &--search {
       font-size: 0;
+      margin-left: 50px;
+      margin-right: 50px;
     }
 
     &--search:before {
@@ -98,4 +82,8 @@
       font-size: @font-size-bigger;
     }
   }
+}
+
+@media @desktop-widths {
+
 }

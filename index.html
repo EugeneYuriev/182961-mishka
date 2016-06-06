@@ -17,6 +17,8 @@
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__item-link" href="catalog.html">Каталог товаров</a></li>
             <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Вязание на заказ</a></li>
+            <li class="main-nav__item"><a class="main-nav__item-link" href="#">Новые поступления</a></li>
+            <li class="main-nav__item"><a class="main-nav__item-link" href="#">Распродажа</a></li>
             <li class="main-nav__item"><a class="main-nav__item-link  main-nav__item-link--search" href="#">Поиск по сайту</a></li>
             <li class="main-nav__item"><a class="main-nav__item-link  main-nav__item-link--cart" href="#">Корзина: пока пуста</a></li>
           </ul>
@@ -33,21 +35,23 @@
       <section class="popular-product">
         <h2 class="popular-product__title">Вязаные корзинки</h2>
         <b class="popular-product__slogan">Товар недели</b>
-        <p class="popular-product__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="popular-product__params">
-          <tr class="popular-product__params-row">
-            <td class="popular-product__param-name">Цвет:</td>
-            <td class="popular-product__param-value">«Тиффани»/серый</td>
-          </tr>
-          <tr class="popular-product__params-row">
-            <td class="popular-product__param-name">Диаметр:</td>
-            <td class="popular-product__param-value">25 см</td>
-          </tr>
-          <tr class="popular-product__params-row">
-            <td class="popular-product__param-name">Высота:</td>
-            <td class="popular-product__param-value">15 см</td>
-          </tr>
-        </table>
+        <div class="popular-product__info">
+          <p class="popular-product__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="popular-product__params">
+            <tr class="popular-product__params-row">
+              <td class="popular-product__param-name">Цвет:</td>
+              <td class="popular-product__param-value">«Тиффани»/серый</td>
+            </tr>
+            <tr class="popular-product__params-row">
+              <td class="popular-product__param-name">Диаметр:</td>
+              <td class="popular-product__param-value">25 см</td>
+            </tr>
+            <tr class="popular-product__params-row">
+              <td class="popular-product__param-name">Высота:</td>
+              <td class="popular-product__param-value">15 см</td>
+            </tr>
+          </table>
+        </div>
         <img class="popular-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         <span class="popular-product__price">Цена: 990 руб.</span>
         <a href="#" class="popular-product__order-btn  btn">Заказать</a>
@@ -80,20 +84,24 @@
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
-        <div class="contacts-email">
-          <span class="contacts-email__label">e-mail:</span>
-          <a class="contacts-email__value" href="#">info@mimimishkashop.ru</a>
-        </div>
-        <div class="contacts-address">
-          <span class="contacts-address__label">адрес:</span>
-          <span class="contacts-address__value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</span>
+        <div class="contacts__info">
+          <div class="contacts-email">
+            <span class="contacts-email__label">e-mail:</span>
+            <a class="contacts-email__value" href="#">info@mimimishkashop.ru</a>
+          </div>
+          <div class="contacts-address">
+            <span class="contacts-address__label">адрес:</span>
+            <span class="contacts-address__value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</span>
+          </div>
         </div>
         <div class="contacts__map" id="yandex-map"></div>
         <a class="contacts__btn  btn" href="#">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
-      <img class="page-footer__logo" src="img/logo-mobile.svg" width="90" height="40" alt="Мишка">
+      <div class="page-footer__logo">
+        <img class="page-footer__logo-image" src="img/logo-mobile.svg" width="90" height="40" alt="Мишка">
+      </div>
       <section class="social-links">
         <a href="#" class="social-link  social-link--ig">Инстаграм</a>
         <a href="#" class="social-link  social-link--fb">Фейсбук</a>

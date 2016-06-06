@@ -82,10 +82,6 @@
   }
 
   .references__write-btn {
-    position: absolute;
-    top: 80px;
-    right: 0;
-
     width: 175px;
   }
 
@@ -107,4 +103,24 @@
     border: none;
   }
 
+}
+
+@media @desktop-widths {
+  .references {
+    .content-wrapper(@desktop-margin-lr);
+    margin-bottom: 150px;
+  }
+
+  .references__header {
+    margin-left: 125px;
+  }
+
+  .references__item {
+    width: 700px;
+    margin-left: 125px;
+  }
+
+  .references__write-btn {
+    float: right;
+  }
 }

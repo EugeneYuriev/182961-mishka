@@ -76,3 +76,17 @@
     .set-font-params(@font-family-header, @tablet-font-size-normal, 24px, 700);
   }
 }
+
+@media @desktop-widths {
+  .product {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 5%;
+  }
+
+  .product:nth-child(3n) {
+    margin-right: 0;
+  }
+
+}

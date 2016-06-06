@@ -62,3 +62,18 @@
     font-size: @tablet-font-size-bigger;
   }
 }
+
+@media @desktop-widths {
+  .about-shop {
+    .content-wrapper(@desktop-margin-lr);
+  }
+
+  .about-shop__title {
+    .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
+    margin-left: 175px;
+  }
+
+  .about-shop__list {
+    margin-left: 175px;
+  }
+}
