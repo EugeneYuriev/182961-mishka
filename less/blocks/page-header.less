@@ -1,33 +1,46 @@
 .page-header {
   box-sizing: border-box;
   .site-wrapper(@mobile-width);
-  padding: 0;
+  margin-bottom: 30px;
 
   border-top: 1px solid @ui-color-grey;
   border-bottom: 1px solid @ui-color-grey;
 
   text-align: center;
+
+  &--index {
+    background: #fafafa url("../img/hero-mobile@1x.jpg") no-repeat;
+    background-position-x: center;
+    background-position-y: 80px;
+  }
+
+  &--inner-page {
+    background: @headline-color;
+  }
 }
 
 .page-header__logo {
   position: relative;
-
-  display: block;
-  height: 80px;
+  display: flex;
   box-sizing: border-box;
-  padding: 20px 0;
+  min-height: 80px;
 
   border-top: 1px solid @ui-color-grey;
   border-bottom: 1px solid @ui-color-grey;
+  background: #ffffff;
+}
+
+.page-header__link {
+  margin: auto;
 }
 
 .page-header__toggle {
   position: absolute;
   top: 50%;
-  right: 0;
-  transform: translateY(-30%);
+  right: 30px;
+  transform: translateY(-50%);
 
-  .set-size(40px, 40px);
+  .set-size(20px, 20px);
   .reset-marg-pad();
 
   border: none;
@@ -40,32 +53,54 @@
 
 @media @tablet-widths {
   .page-header {
-    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
-    .clearfix();
     .site-wrapper(@tablet-width);
+    margin-bottom: 50px;
+
+    &--inner-page {
+      margin-bottom: 80px;
+    }
   }
 
   .page-header__logo {
-    float: left;
+    order: -2;
+    flex-grow: 1;
+    min-height: 90px;
     padding-left: @tablet-margin-lr;
+    border-top: none;
+    text-align: left;
+    background-color: #ffffff;
+  }
 
-    border-bottom: none;
+  .page-header__link {
+    margin-left: 0;
   }
 
   .page-header__toggle {
     display: none;
   }
 
-  .page-header__delivery-info {    
+  .page-header__delivery-info {
     display: block;
     margin-right: @tablet-margin-lr;
+    margin-left: auto;
+    margin-top: 20px;
 
-    .set-font-params(@font-family-header, @font-size-normal, 80px, 400);
+    .set-font-params(@font-family-header, @tablet-font-size-small, 24px, 400);
     color: #444444;
   }
 }
 
 @media @desktop-widths {
+  .page-header {
+    .site-wrapper(@desktop-width);
+    margin-bottom: 70px;
 
+    &--inner-page {
+      margin-bottom: 130px;
+    }
+  }
 }

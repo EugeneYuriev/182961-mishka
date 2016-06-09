@@ -1,0 +1,34 @@
+.extra-nav {
+  .reset-marg-pad();
+  list-style: none;
+  .set-font-params(@font-family-header, @font-size-big, 16px, 700);
+
+
+  &--closed {
+    display: none;
+  }
+}
+
+.extra-nav__item-link {
+  .menu-item-link();
+}
+
+@media @desktop-widths {
+  .extra-nav {
+    display: flex;
+    margin-left: @desktop-margin-lr;
+  }
+
+  .extra-nav__item {
+    display: inline-block;
+  }
+
+  .extra-nav__item-link {
+    .reset-marg-pad();
+    padding-top: 20px;
+    padding-right: 60px;
+
+    .set-font-params(@font-family-header, @desktop-font-size-small, 24px, 700);
+    border: none;
+  }
+}

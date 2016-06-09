@@ -1,14 +1,17 @@
 .head-line {
+  box-sizing: border-box;
   .set-font-params(@font-family-header, @font-size-large, 30px, 700);
   text-align: center;
+  margin: 0;
 
   &--index {
+    min-height: 300px;
     padding-top: 90px;
-    padding-bottom: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   &--inner-page{
-    margin-bottom: 30px;
     padding: 73px 0;
 
     background: @headline-color;
@@ -17,21 +20,20 @@
 
 @media @tablet-widths {
   .head-line {
-    display: block;
-    width: 500px;
-    margin: 0 auto;
-
+    width: 100%;
+    margin: auto;
     .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
 
     &--index {
-      min-height: 470px;
-      padding-top: 150px;
+      min-height: 576px;
+      padding-top: 115px;
+      padding-left: 130px;
+      padding-right: 130px;
     }
 
     &--inner-page {
-      width: 100%;
-      margin-bottom: 80px;
-      padding-top: 120px;
+      padding-top: 50px;
+      padding-bottom: 90px;
     }
   }
 }
@@ -39,5 +41,10 @@
 @media @desktop-widths {
   .head-line {
     .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
+
+    &--index {
+      padding-left: 260px;
+      padding-right: 260px;
+    }
   }
 }

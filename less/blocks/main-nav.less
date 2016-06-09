@@ -1,89 +1,61 @@
 .main-nav {
+  .reset-marg-pad();
+  list-style: none;
 
   &--closed {
     display: none;
   }
 }
 
-.main-nav__list {
-  .reset-marg-pad();
-
-  list-style: none;
-  .set-font-params(@font-family-header, @font-size-big, 16px, 700);
-}
-
-.main-nav__item {
-  display: block;
-  .reset-marg-pad();
-  padding-left: 90px;
-
-  line-height: 80px;
-  text-align: left;
-
-  border-bottom: 1px solid @ui-color-grey;
-}
-
 .main-nav__item-link {
-  position: relative;
-
-  text-decoration: none;
-  color: @font-color-base;
-
-  &--search::before,
-  &--cart::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -40px;
-
-    display: block;
-    .set-size(20px, 20px);
-
-    background: #ffffff url("../img/icon-search.svg") no-repeat;
-  }
-
-  &--cart::before {
-    background: #ffffff url("../img/icon-cart.svg") no-repeat;
-  }
+  .menu-item-link();
 }
 
 @media @tablet-widths {
   .main-nav {
-    padding-right: @tablet-margin-lr;
+    display: flex;
+    margin-left: @tablet-margin-lr;
+
     &--closed {
       display: block;
     }
   }
 
-  .main-nav__wrapper {
-    .clearfix();
-  }
-
   .main-nav__item {
-    float: left;
-    padding-left: 10px;
-
-    border-bottom: none;
-    border-left: 1px solid @ui-color-grey;
+    // почему без этого не выстраивает в строку, даже если задавать wrap?
+    display: inline-block;
   }
 
   .main-nav__item-link {
-    &--search {
-      font-size: 0;
-      margin-left: 50px;
-      margin-right: 50px;
-    }
+    padding-top: 20px;
+    padding-left: 0;
+    padding-right: 35px;
+    border-bottom: none;
 
-    &--search:before {
-      top: -15px;
-    }
-
-    &--cart {
-      font-size: @font-size-bigger;
-    }
+    font-size: @tablet-font-size-small;
   }
 }
 
 @media @desktop-widths {
+  .main-nav {
+    order: -3;
 
+    margin-left: 0;
+    padding-left: @desktop-margin-lr;
+    border-bottom: 1px solid @ui-color-grey;
+    background-color: #ffffff;
+  }
+
+  .main-nav__item-link {
+    padding-top: 33px;
+    padding-bottom: 33px;
+    padding-left: 36px;
+    font-size: @desktop-font-size-normal;
+    border-left: 1px solid @ui-color-grey;
+  }
+
+  .main-nav__item:first-child  .main-nav__item-link {
+    padding-left: 0;
+    border-left: none;
+  }
 }

@@ -52,3 +52,17 @@
   line-height: @line-height;
   font-weight: @font-weight;
 }
+
+.menu-item-link() {
+  display: block;
+  .reset-marg-pad();
+  padding-left: 76px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+
+  text-align: left;
+  border-bottom: 1px solid @ui-color-grey;
+  text-decoration: none;
+  color: @font-color-base;
+  .set-font-params(@font-family-header, @font-size-big, 24px, 700);
+}

@@ -21,7 +21,7 @@
   line-height: 30px;
 }
 
-.references__item-author {
+.references__item-author-name {
   display: block;
   .reset-marg-pad();
   margin-bottom: 16px;
@@ -58,8 +58,9 @@
 
 @media @tablet-widths {
   .references {
-    position: relative;
-    .clearfix();
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 
     .reset-marg-pad();
     margin-bottom: 150px;
@@ -68,35 +69,40 @@
 
     background: #ffffff url("../img/review@1x.jpg") no-repeat;
     background-position: left;
+    background-size: auto 100%;
+
   }
 
   .references__header {
-    padding-left: 50px;
+    order: -1;
+    margin-left: 50px;
 
     .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
   }
 
   .references__item {
-    padding-left: 50px;
+    margin-left: 50px;
     padding-right: 20px;
   }
 
   .references__write-btn {
+    order: -1;
     width: 175px;
+    margin-left: auto;
+    margin-right: 50px;
   }
 
   .references__item-author {
     width: 300px;
+    margin-left: 50px;
 
     font-size: @tablet-font-size-big;
   }
 
   .references__controls {
-    position: absolute;
-    bottom: 120px;
-    right: 0;
-
     width: 180px;
+    margin-left: auto;
+    margin-right: 50px;
   }
 
   .references__toggle {
@@ -112,15 +118,21 @@
   }
 
   .references__header {
-    margin-left: 125px;
+    margin-left: 175px;
   }
 
   .references__item {
     width: 700px;
-    margin-left: 125px;
+    margin-left: 175px;
   }
 
-  .references__write-btn {
-    float: right;
+  .references__item-author {
+    margin-left: 175px;
   }
+
+  .references__write-btn,
+  .references__controls {
+    margin-right: 0;
+  }
+
 }
