@@ -66,3 +66,13 @@
   color: @font-color-base;
   .set-font-params(@font-family-header, @font-size-big, 24px, 700);
 }
+
+.horizontal-line() {
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 24px;
+    background: url("../img/zigzag-line-desktop.svg");
+  }
+}

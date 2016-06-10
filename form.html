@@ -42,7 +42,7 @@
               <label class="order-form__radio-label" for="product-type-kid_toy">Детская игрушка</label>
             </div>
           </div>
-          <div class="order-form__param-group">
+          <div class="order-form__param-group  order-form__param-group--even">
             <div class="order-form__param-group-title">Цвет</div>
             <div class="order-form__param-group-data">
               <input class="order-form__checkbox-input" type="checkbox" name="product-color" id="product-color_white" checked>
@@ -76,13 +76,13 @@
               </div>
             </div>
           </div>
-          <div class="order-form__param-group">
+          <div class="order-form__param-group  order-form__param-group--even">
             <div class="order-form__param-group-title">Тел</div>
               <div class="order-form__param-group-data">
               <input class="order-form__input  order-form__input--tel" name="tel" type="tel" placeholder="+7 ХХХ ХХ ХХ" pattern="+[0-9]{1} [0-9]{3} [0-9]{2} [0-9]{2}" required>
             </div>
           </div>
-          <div class="order-form__param-group">
+          <div class="order-form__param-group  order-form__param-group--even">
             <div class="order-form__param-group-title">E-mail</div>
               <div class="order-form__param-group-data">
               <input class="order-form__input  order-form__input--email" name="email" type="email" placeholder="Ваш e-mail" required>
@@ -111,9 +111,12 @@
         <a href="#" class="social-link social-link--tw">Твитер</a>
       </section>
       <section class="copyright">
-        <a href="#" class="copyright__link">Разработано</a>
-        <img class="copyright__logo" src="img/logo-htmlacademy.svg" alt="HTML Academy">
+        <span class="copyright-text">Разработано</span>
+        <a href="#" class="copyright__link">
+          <img class="copyright__logo" src="img/logo-htmlacademy.svg" alt="HTML Academy">
+        </a>
       </section>
     </footer>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

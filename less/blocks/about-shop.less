@@ -12,7 +12,7 @@
 .about-shop__list {
   .reset-marg-pad();
   list-style: none;
-  .set-font-params(@font-family-header, @font-size-big, 16px, 700);
+  .set-font-params(@font-family-header, @font-size-big, 20px, 700);
 }
 
 .about-shop__item {
@@ -55,14 +55,24 @@
     .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
   }
 
+  .about-shop__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .about-shop__item {
-    display: inline-block;
-    vertical-align: top;
-    width: 320px;
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 80px;
     padding-top: 115px;
 
     font-size: @tablet-font-size-bigger;
+    line-height: 24px;
     background-position-y: 55px;
+  }
+
+  .about-shop__item:nth-child(2n) {
+    padding-right: 0;
   }
 }
 
@@ -78,6 +88,7 @@
   }
 
   .about-shop__list {
+    width: 700px;
     margin-left: 175px;
   }
 }

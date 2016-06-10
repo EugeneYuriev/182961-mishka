@@ -11,19 +11,26 @@
   .menu-item-link();
 }
 
+@media @mobile-widths-only {
+  .main-nav {
+    &--opened {
+      position: absolute;
+      z-index: 10;
+
+      display: block;
+      background: #ffffff;
+    }
+  }
+}
+
 @media @tablet-widths {
   .main-nav {
     display: flex;
     margin-left: @tablet-margin-lr;
 
     &--closed {
-      display: block;
+      display: flex;
     }
-  }
-
-  .main-nav__item {
-    // почему без этого не выстраивает в строку, даже если задавать wrap?
-    display: inline-block;
   }
 
   .main-nav__item-link {

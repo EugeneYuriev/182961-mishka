@@ -1,6 +1,19 @@
 .popular-product {
+  position: relative;
   .content-wrapper(@mobile-margin-lr);
   margin-bottom: 72px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+
+    display: block;
+    width: 100%;
+    height: 6px;
+    background: url("../img/zigzag-line.svg");
+    // background: green;
+  }
 }
 
 .popular-product__title {
