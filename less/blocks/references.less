@@ -1,23 +1,21 @@
 .references {
   .content-wrapper(@mobile-margin-lr);
-  margin-bottom: 92px;
+  margin-bottom: 85px;
 }
 
 .references__header {
   .reset-marg-pad();
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   .set-font-params(@font-family-header, @font-size-large, 30px, 700);
 }
 
 .references__item {
   .reset-marg-pad();
-  margin-bottom: 37px;
+  margin-bottom: 20px;
 }
 
 .references__item-text {
-  margin-bottom: 30px;
-
   line-height: 30px;
 }
 
@@ -25,10 +23,15 @@
   margin-bottom: 36px;
 }
 
+.references__item-author-email {
+  text-decoration: none;
+  color: @font-color-base;
+}
+
 .references__item-author-name {
   display: block;
   .reset-marg-pad();
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 
   font-weight: 700;
   font-style: normal;
@@ -67,8 +70,8 @@
     align-items: flex-start;
 
     .reset-marg-pad();
-    margin-bottom: 150px;
-    padding-top: 80px;
+    margin-bottom: 100px;
+    padding-top: 75px;
     padding-bottom: 100px;
 
     background: #ffffff url("../img/review@1x.jpg") no-repeat;
@@ -80,12 +83,14 @@
   .references__header {
     order: -1;
     margin-left: 50px;
+    margin-bottom: 30px;
 
     .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
   }
 
   .references__item {
     margin-left: 50px;
+    margin-bottom: 0;
     padding-right: 20px;
   }
 
@@ -103,6 +108,10 @@
     font-size: @tablet-font-size-big;
   }
 
+  .references__item-author-name {
+    margin-bottom: 5px;
+  }
+
   .references__controls {
     width: 180px;
     margin-left: auto;
@@ -118,11 +127,12 @@
 @media @desktop-widths {
   .references {
     .content-wrapper(@desktop-margin-lr);
-    margin-bottom: 150px;
+    margin-bottom: 110px;
   }
 
   .references__header {
     margin-left: 175px;
+    .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
   }
 
   .references__item {

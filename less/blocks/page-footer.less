@@ -1,4 +1,7 @@
 .page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   .site-wrapper(@mobile-width);
   background: @headline-color;
 }
@@ -9,7 +12,6 @@
 
 @media @tablet-widths {
   .page-footer {
-    display: flex;
     .site-wrapper(@tablet-width);
     justify-content: space-between;
   }
