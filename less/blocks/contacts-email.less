@@ -10,12 +10,23 @@
 }
 
 .contacts-email__value {
+  position: relative;
   text-decoration: none;
   color: @font-color-base;
 
   display: inline-block;
   vertical-align: top;
   border-bottom: 1px solid @ui-color-green;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 15px;
+    height: 3px;
+    background: white;
+  }
 
   &:hover {
     color: @ui-color-green;

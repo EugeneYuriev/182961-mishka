@@ -96,7 +96,7 @@
 
 .order-form__radio-input:checked + .order-form__radio-label::after {
   .abs-centrateY();
-  left: 14px;
+  left: 13px;
 
   .set-size(17px, 17px);
 
@@ -106,9 +106,9 @@
 
 .order-form__checkbox-input:checked + .order-form__checkbox-label::after {
   .abs-centrateY();
-  left: 10px;
+  left: 5px;
 
-  .set-size(25px, 25px);
+  .set-size(35px, 23px);
 
   background: transparent url("../img/icon-tick.svg") no-repeat;
 }
@@ -138,7 +138,12 @@
   }
 
   &:active {
+    border-color: @ui-color-green;
     color: @input-color-active;
+  }
+
+  &:focus {
+    border-color: @ui-color-green;
   }
 
   &:invalid {
@@ -242,6 +247,7 @@
   }
 
   .order-form__radio-input:checked + .order-form__radio-label::after {
+    left: 16px;
     .set-size(22px, 22px);
   }
 
@@ -256,6 +262,10 @@
     &::before {
       .set-size(50px, 50px);
     }
+  }
+
+  .order-form__checkbox-input:checked + .order-form__checkbox-label::after {
+    left: 10px;
   }
 
   .order-form__input-wrapper {
