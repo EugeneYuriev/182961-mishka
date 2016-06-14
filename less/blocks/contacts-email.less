@@ -16,16 +16,16 @@
 
   display: inline-block;
   vertical-align: top;
-  border-bottom: 1px solid @ui-color-green;
+  // border-bottom: 1px solid @ui-color-green;
 
   &:after {
     content: "";
     position: absolute;
     bottom: -2px;
-    right: 0;
-    width: 15px;
-    height: 3px;
-    background: white;
+    left: 0;
+    width: 90%;
+    height: 1px;
+    background: @ui-color-green;
   }
 
   &:hover {
@@ -34,7 +34,10 @@
 
   &:active {
     color: @ui-color-green-active;
-    border-bottom-color: @ui-color-green-active;
+  }
+
+  &:active::after {
+    background: @ui-color-green-active;
   }
 }
 

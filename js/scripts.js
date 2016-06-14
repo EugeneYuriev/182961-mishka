@@ -1,6 +1,5 @@
 var navMain = document.querySelector('.main-nav');
 var navUser = document.querySelector('.user-nav');
-
 var navToggle = document.querySelector('.page-header__toggle');
 
 navToggle.addEventListener('click', function() {
