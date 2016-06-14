@@ -1,30 +1,37 @@
 .references {
   .content-wrapper(@mobile-margin-lr);
-  margin-bottom: 92px;
+  margin-bottom: 85px;
 }
 
 .references__header {
   .reset-marg-pad();
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   .set-font-params(@font-family-header, @font-size-large, 30px, 700);
 }
 
 .references__item {
   .reset-marg-pad();
-  margin-bottom: 37px;
+  margin-bottom: 20px;
 }
 
 .references__item-text {
-  margin-bottom: 30px;
-
   line-height: 30px;
 }
 
 .references__item-author {
+  margin-bottom: 36px;
+}
+
+.references__item-author-email {
+  text-decoration: none;
+  color: @font-color-base;
+}
+
+.references__item-author-name {
   display: block;
   .reset-marg-pad();
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 
   font-weight: 700;
   font-style: normal;
@@ -58,45 +65,57 @@
 
 @media @tablet-widths {
   .references {
-    position: relative;
-    .clearfix();
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 
     .reset-marg-pad();
-    margin-bottom: 150px;
-    padding-top: 80px;
+    margin-bottom: 100px;
+    padding-top: 75px;
     padding-bottom: 100px;
 
     background: #ffffff url("../img/review@1x.jpg") no-repeat;
     background-position: left;
+    background-size: auto 100%;
+
   }
 
   .references__header {
-    padding-left: 50px;
+    order: -1;
+    margin-left: 50px;
+    margin-bottom: 30px;
 
     .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
   }
 
   .references__item {
-    padding-left: 50px;
+    margin-left: 50px;
+    margin-bottom: 0;
     padding-right: 20px;
   }
 
   .references__write-btn {
+    order: -1;
     width: 175px;
+    margin-left: auto;
+    margin-right: 50px;
   }
 
   .references__item-author {
     width: 300px;
+    margin-left: 50px;
 
     font-size: @tablet-font-size-big;
   }
 
-  .references__controls {
-    position: absolute;
-    bottom: 120px;
-    right: 0;
+  .references__item-author-name {
+    margin-bottom: 5px;
+  }
 
+  .references__controls {
     width: 180px;
+    margin-left: auto;
+    margin-right: 50px;
   }
 
   .references__toggle {
@@ -108,19 +127,26 @@
 @media @desktop-widths {
   .references {
     .content-wrapper(@desktop-margin-lr);
-    margin-bottom: 150px;
+    margin-bottom: 110px;
   }
 
   .references__header {
-    margin-left: 125px;
+    margin-left: 175px;
+    .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
   }
 
   .references__item {
     width: 700px;
-    margin-left: 125px;
+    margin-left: 175px;
   }
 
-  .references__write-btn {
-    float: right;
+  .references__item-author {
+    margin-left: 175px;
   }
+
+  .references__write-btn,
+  .references__controls {
+    margin-right: 0;
+  }
+
 }

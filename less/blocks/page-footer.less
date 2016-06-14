@@ -1,4 +1,7 @@
 .page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   .site-wrapper(@mobile-width);
   background: @headline-color;
 }
@@ -9,15 +12,12 @@
 
 @media @tablet-widths {
   .page-footer {
-    position: relative;
-
     .site-wrapper(@tablet-width);
-    .clearfix();
+    justify-content: space-between;
   }
 
   .page-footer__logo {
     display: block;
-    float: left;
     margin: 50px;
   }
 }

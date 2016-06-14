@@ -1,28 +1,27 @@
 .copyright {
-  padding: 30px 0;
-
-  text-align: center;
+  padding: 25px;
 }
 
 .copyright__link {
-  display: inline-block;
-  vertical-align: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   text-decoration: none;
   color: @font-color-base;
   .set-font-params(@font-family-header, @font-size-bigger, 18px, 700);
+
+  &:active .copyright-text {
+    color: @font-color-base-active;
+  }
 }
 
 .copyright__logo {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 20px;
+  padding-left: 26px;
 }
 
 @media @tablet-widths {
   .copyright {
-    float: right;
-    width: 200px;
     padding: 60px 0;
     margin-right: @tablet-margin-lr;
   }

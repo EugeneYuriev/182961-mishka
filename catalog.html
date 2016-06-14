@@ -7,29 +7,29 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header  page-header--inner-page">
       <div class="page-header__logo">
         <a class="page-header__link" href="index.html">
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="90" height="40" alt="Мишка">
         </a>
         <button class="page-header__toggle" type="button"></button>
       </div>
-      <nav class="main-nav  main-nav--closed">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__item-link">Каталог товаров</a></li>
-            <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item"><a class="main-nav__item-link" href="#">Новые поступления</a></li>
-            <li class="main-nav__item"><a class="main-nav__item-link" href="#">Распродажа</a></li>
-            <li class="main-nav__item"><a class="main-nav__item-link  main-nav__item-link--search" href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item"><a class="main-nav__item-link  main-nav__item-link--cart" href="#">Корзина: пока пуста</a></li>
-          </ul>
-        </div>
-      </nav>
+      <ul class="main-nav  main-nav--closed">
+        <li class="main-nav__item"><a class="main-nav__item-link">Каталог товаров</a></li>
+        <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Вязание на заказ</a></li>
+      </ul>
+      <ul class="extra-nav  extra-nav--closed">
+        <li class="extra-nav__item"><a class="extra-nav__item-link" href="#">Новые поступления</a></li>
+        <li class="extra-nav__item"><a class="extra-nav__item-link" href="#">Распродажа</a></li>
+      </ul>
+      <ul class="user-nav  user-nav--closed">
+        <li class="user-nav__item"><a class="user-nav__item-link  user-nav__item-link--search" href="#">Поиск по сайту</a></li>
+        <li class="user-nav__item"><a class="user-nav__item-link  user-nav__item-link--cart" href="#">Корзина: пока пуста</a></li>
+      </ul>
       <div class="page-header__delivery-info">Бесплатная доставка по России</div>
+      <h1 class="head-line  head-line--inner-page">Каталог товаров</h1>
     </header>
     <main class="page-main">
-      <h1 class="head-line  head-line--inner-page">Каталог товаров</h1>
       <section class="product-catalog">
         <article class="product">
           <a class="product__link" href="#">
@@ -38,8 +38,10 @@
           <div class="product__data">
             <h1 class="product__name"><a href="#">Зайчик-попрыгайчик</a></h1>
             <div class="product__params">Рост 30 см, вес 200 г</div>
-            <div class="product__price">1 200 руб.</div>
-            <a class="product__buy-btn" href="#">Купить</a>
+            <div class="product__actions">
+              <div class="product__price">1 200 руб.</div>
+              <a class="product__buy-btn" href="#">Купить</a>
+            </div>
           </div>
         </article>
         <article class="product">
@@ -49,8 +51,10 @@
           <div class="product__data">
             <h1 class="product__name"><a href="#">Корзинка для белья</a></h1>
             <div class="product__params">Диаметр 15 см, высота 10 см</div>
-            <div class="product__price">690 руб.</div>
-            <a class="product__buy-btn" href="#">Купить</a>
+            <div class="product__actions">
+              <div class="product__price">690 руб.</div>
+              <a class="product__buy-btn" href="#">Купить</a>
+            </div>
           </div>
         </article>
         <article class="product">
@@ -60,18 +64,22 @@
           <div class="product__data">
             <h1 class="product__name"><a href="#">Большая корзинка для игрушек</a></h1>
             <div class="product__params">Диаметр 30 см, высота 30 см</div>
-            <div class="product__price">1 500 руб.</div>
-            <a class="product__buy-btn" href="#">Купить</a>
+            <div class="product__actions">
+              <div class="product__price">1 500 руб.</div>
+              <a class="product__buy-btn" href="#">Купить</a>
+            </div>
           </div>
         </article>
       </section>
       <section class="about-production">
-        <h2 class="about-production__title">Процесс производства</h2>
         <div class="about-production__clip">
           <button class="about-production__clip-play"></button>
         </div>
-        <p class="about-production__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="about-production__order-btn  btn" href="#">Сделать заказ</a>
+        <div class="about-production__info">
+          <h2 class="about-production__title">Процесс производства</h2>
+          <p class="about-production__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="about-production__order-btn  btn" href="#">Сделать заказ</a>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
@@ -87,10 +95,11 @@
       </section>
       <section class="copyright">
         <a href="#" class="copyright__link">
-          Разработано
+          <span class="copyright-text">Разработано</span>
           <img class="copyright__logo" src="img/logo-htmlacademy.svg" alt="HTML Academy">
         </a>
       </section>
     </footer>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

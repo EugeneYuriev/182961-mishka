@@ -10,5 +10,15 @@
   text-align: center;
 
   background-color: transparent;
-  border: 2px solid @border-color;
+  border: 2px solid @btn-color;
+
+  &:hover {
+    color: @font-color-base-contrast;
+    background-color: @btn-color;
+  }
+
+  &:active {
+    color: @font-color-base-contrast-active;
+    background-color: @btn-color;
+  }
 }

@@ -1,5 +1,6 @@
 .about-shop {
   .content-wrapper(@mobile-margin-lr);
+  margin-bottom: 65px;
 }
 
 .about-shop__title {
@@ -10,62 +11,75 @@
 
 .about-shop__list {
   .reset-marg-pad();
-  margin-bottom: 65px;
   list-style: none;
-
-  .set-font-params(@font-family-header, @font-size-big, 16px, 700);
+  .set-font-params(@font-family-header, @font-size-big, 20px, 700);
 }
 
 .about-shop__item {
-  padding-top: 95px;
+  padding-top: 82px;
+  background-position: 10px 35px;
+  background-repeat: no-repeat;
 
-  &--feature-1 {
-    background: url("../img/icon-feature-flower.svg") 10px 35px no-repeat;
+  &--feature-flower {
+    background-image: url("../img/icon-feature-flower.svg");
   }
 
-  &--feature-2 {
-    background: url("../img/icon-feature-threads.svg") 10px 35px no-repeat;
+  &--feature-threads {
+    background-image: url("../img/icon-feature-threads.svg");
   }
 
-  &--feature-3 {
-    background: url("../img/icon-feature-rectangle.svg") 10px 35px no-repeat;
+  &--feature-rectangle {
+    background-image: url("../img/icon-feature-rectangle.svg");
   }
 
-  &--feature-4 {
-    background: url("../img/icon-feature-rocket.svg") 10px 35px no-repeat;
+  &--feature-rocket {
+    background-image: url("../img/icon-feature-rocket.svg");
   }
 
-  &--feature-5 {
-    background: url("../img/icon-feature-heart.svg") 10px 35px no-repeat;
+  &--feature-heart {
+    background-image: url("../img/icon-feature-heart.svg");
   }
 
-  &--feature-6 {
-    background: url("../img/icon-feature-gift.svg") 10px 35px no-repeat;
+  &--feature-gift {
+    background-image: url("../img/icon-feature-gift.svg");
   }
 }
 
 @media @tablet-widths {
   .about-shop {
     .content-wrapper(@tablet-margin-lr);
+    margin-bottom: 85px;
   }
 
   .about-shop__title {
     .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
   }
 
+  .about-shop__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .about-shop__item {
-    display: inline-block;
-    vertical-align: top;
-    width: 320px;
-    padding-bottom: 50px;
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 80px;
+    padding-top: 105px;
 
     font-size: @tablet-font-size-bigger;
+    line-height: 24px;
+    background-position-y: 55px;
+  }
+
+  .about-shop__item:nth-child(2n) {
+    padding-right: 0;
   }
 }
 
 @media @desktop-widths {
   .about-shop {
     .content-wrapper(@desktop-margin-lr);
+    margin-bottom: 80px;
   }
 
   .about-shop__title {
@@ -74,6 +88,7 @@
   }
 
   .about-shop__list {
+    width: 700px;
     margin-left: 175px;
   }
 }

@@ -1,14 +1,17 @@
 .head-line {
+  box-sizing: border-box;
   .set-font-params(@font-family-header, @font-size-large, 30px, 700);
   text-align: center;
+  margin: 0;
 
   &--index {
-    padding-top: 90px;
-    padding-bottom: 120px;
+    min-height: 300px;
+    padding-top: 85px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   &--inner-page{
-    margin-bottom: 30px;
     padding: 73px 0;
 
     background: @headline-color;
@@ -17,21 +20,20 @@
 
 @media @tablet-widths {
   .head-line {
-    display: block;
-    width: 500px;
-    margin: 0 auto;
-
+    width: 100%;
+    margin: auto;
     .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
 
     &--index {
-      min-height: 470px;
-      padding-top: 150px;
+      min-height: 555px;
+      padding-top: 80px;
+      padding-left: 130px;
+      padding-right: 130px;
     }
 
     &--inner-page {
-      width: 100%;
-      margin-bottom: 80px;
-      padding-top: 120px;
+      padding-top: 20px;
+      padding-bottom: 80px;
     }
   }
 }
@@ -39,5 +41,17 @@
 @media @desktop-widths {
   .head-line {
     .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
+
+    &--index {
+      min-height: 580px;
+      padding-top: 110px;
+      padding-left: 260px;
+      padding-right: 260px;
+    }
+
+    &--inner-page {
+      padding-top: 50px;
+      padding-bottom: 100px;
+    }
   }
 }
