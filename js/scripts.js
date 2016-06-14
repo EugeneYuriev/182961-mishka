@@ -32,7 +32,7 @@ YMaps.jQuery(function () {
     // Создание стиля для значка метки
     var s = new YMaps.Style();
     s.iconStyle = new YMaps.IconStyle();
-    s.iconStyle.href = "../img/icon-map-pin.svg";
+    s.iconStyle.href = "img/icon-map-pin.svg";
     s.iconStyle.size = new YMaps.Point(70, 100);
     s.iconStyle.offset = new YMaps.Point(-35, -100);
 
