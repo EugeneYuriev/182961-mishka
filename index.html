@@ -100,7 +100,9 @@
             <span class="contacts-address__value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</span>
           </div>
         </div>
-        <div class="contacts__map" id="yandex-map"></div>
+        <div class="contacts__map">
+          <div class="contacts__ya-map" id="yandex-map"></div>
+        </div>
         <a class="contacts__btn  btn" href="#">Напишите нам</a>
       </section>
     </main>
@@ -128,7 +130,7 @@
       YMaps.jQuery(function () {
           // Создание экземпляра карты и его привязка к созданному контейнеру
           var map = new YMaps.Map(YMaps.jQuery("#yandex-map")[0]);
-          map.setCenter(new YMaps.GeoPoint(30.3219187, 59.9390039), 17);
+          map.setCenter(new YMaps.GeoPoint(30.323054, 59.938631), 17);
           map.addControl(new YMaps.ToolBar());
           map.addControl(new YMaps.Zoom());
 
@@ -137,7 +139,7 @@
           s.iconStyle = new YMaps.IconStyle();
           s.iconStyle.href = "/img/icon-map-pin.svg";
           s.iconStyle.size = new YMaps.Point(70, 100);
-          // s.iconStyle.offset = new YMaps.Point(-35, -100);
+          s.iconStyle.offset = new YMaps.Point(-35, -100);
 
           // Создание метки и добавление ее на карту
           var placemark = new YMaps.Placemark(map.getCenter(), {style: s});
