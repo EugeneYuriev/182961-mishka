@@ -55,24 +55,30 @@
 
 .about-production__clip-play {
   .abs-centrate();
+  display: flex;
 
   background: transparent;
   border: none;
+  outline: none;
   cursor: pointer;
 }
 
+// почему не работает на мобильной версии?
 .about-production__clip-play-image {
+  width: 100px;
+  margin: auto;
+
   fill: @ui-color-green;
 
-  // не пойму, почему не срабатывают псевдоклассы?
+  // почему не срабатывает увеличение?
   &:hover {
-    // fill: red;
-    width: 120%;
+    width: 120px;
   }
 
+  // почему не меняется цвет?
   &:active {
     fill: @ui-color-green-active;
-    width: 80%;
+    width: 80px;
   }
 }
 
