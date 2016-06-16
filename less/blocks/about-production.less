@@ -55,6 +55,7 @@
 
 .about-production__clip-play {
   .abs-centrate();
+  z-index: 10;
   display: flex;
 
   background: transparent;
@@ -63,22 +64,23 @@
   cursor: pointer;
 }
 
-// почему не работает на мобильной версии?
 .about-production__clip-play-image {
   width: 100px;
+  height: 80px;
   margin: auto;
 
   fill: @ui-color-green;
 
-  // почему не срабатывает увеличение?
   &:hover {
+    fill: @ui-color-green;
     width: 120px;
+    height: 100px;
   }
 
-  // почему не меняется цвет?
   &:active {
-    fill: @ui-color-green-active;
+    fill: @video-play-active;
     width: 80px;
+    height: 60px;
   }
 }
 
