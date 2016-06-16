@@ -20,13 +20,6 @@
   }
 }
 
-.about-production__image {
-  position: absolute;
-  top: 30px;
-  left: -5px;
-  fill: @ui-color-green;
-}
-
 .about-production__title {
   position: relative;
 
@@ -37,6 +30,17 @@
   text-align: left;
 
   .set-font-params(@font-family-header, @font-size-big, 24px, 700);
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -5px;
+
+    width: 30px;
+    height: 30px;
+    background: #ffffff url("../img/icon-video.svg") no-repeat;
+  }
 }
 
 .about-production__clip {
@@ -110,11 +114,11 @@
     padding-bottom: 26px;
     padding-left: 65px;
     .set-font-params(@font-family-header, @tablet-font-size-big, 24px, 700);
-  }
 
-  .about-production__image {
-    left: 10px;
-    top: 25px;
+    &:before {
+      left: 10px;
+      top: 25px;
+    }
   }
 
   .about-production__clip {
@@ -189,11 +193,11 @@
     padding-left: 0;
     padding-right: 20px;
     padding-top: 100px;
-  }
 
-  .about-production__image {
-    left: 0px;
-    top: 40px;
+    &:before {
+      left: 0px;
+      top: 40px;
+    }
   }
 
   .about-production__order-btn {
