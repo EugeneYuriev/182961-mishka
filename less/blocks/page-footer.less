@@ -10,6 +10,18 @@
   display: none;
 }
 
+.page-footer--inner-page  .page-footer__logo-image {
+  // cursor: pointer;
+
+  &:hover {
+    fill: @ui-color-link-hover;
+  }
+
+  &:active {
+    fill: @ui-color-link-active;
+  }
+}
+
 @media @tablet-widths {
   .page-footer {
     .site-wrapper(@tablet-width);

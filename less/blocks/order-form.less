@@ -120,6 +120,7 @@
 }
 
 .order-form__input {
+  position: relative;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -157,21 +158,33 @@
     border: 2px solid @border-color;
   }
 
-  &--tel,
-  &--email {
-    padding-top: 0;
-
-    background: #ffffff url("../img/icon-phone.svg") no-repeat;
-    background-position-x: right;
-  }
-
-  &--email {
-    background-image: url("../img/icon-mail.svg");
-  }
-
   &--invalid {
     border-color: @input-color-error;
   }
+
+  &--invalid .order-form__input-image {
+    fill: @menu-item-image-color;
+  }
+}
+
+.order-form__input-image-wrapper {
+  position: relative;
+  width: 100%;
+
+  &:hover .order-form__input-image {
+    fill: @ui-color-green;
+  }
+
+  &:active .order-form__input-image {
+    fill: @ui-color-green;
+  }
+}
+
+.order-form__input-image {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  fill: @menu-item-image-color;
 }
 
 .order-form__order-btn {
@@ -302,13 +315,16 @@
       width: 100%;
       margin-left: 0;
       margin-bottom: 30px;
-      background-position-x: 95%;
     }
 
     &--text {
       margin-bottom: 20px;
       padding: 15px;
     }
+  }
+
+  .order-form__input-image {
+    top: 0;
   }
 
   .order-form__order-btn {

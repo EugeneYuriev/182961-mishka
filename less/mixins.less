@@ -5,7 +5,13 @@
 }
 
 .content-wrapper(@margin-lr) {
-  margin: 0 @margin-lr;
+  margin-left: @margin-lr;
+  margin-right: @margin-lr;
+}
+
+.content-wrapper-pad(@padding) {
+  padding-left: @padding;
+  padding-right: @padding;
 }
 
 .clearfix() {
@@ -71,12 +77,24 @@
   }
 }
 
-.horizontal-line() {
-  &::after {
+.zigzag-line(@height, @bottom) {
+  &:after {
     content: "";
+    position: absolute;
+    left: 0;
+    bottom: @bottom;
+
     display: block;
     width: 100%;
-    height: 24px;
-    background: url("../img/zigzag-line-desktop.svg");
+    height: @height;
+    background: transparent url("../img/bg-zigzag-line.svg") no-repeat;
+    background-size: cover;
+  }
+}
+
+.zigzag-line-size(@height, @bottom) {
+  &:after {
+    bottom: @bottom;
+    height: @height;
   }
 }

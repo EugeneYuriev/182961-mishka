@@ -20,6 +20,13 @@
   }
 }
 
+.about-production__image {
+  position: absolute;
+  top: 30px;
+  left: -5px;
+  fill: @ui-color-green;
+}
+
 .about-production__title {
   position: relative;
 
@@ -30,18 +37,6 @@
   text-align: left;
 
   .set-font-params(@font-family-header, @font-size-big, 24px, 700);
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: -5px;
-
-    width: 35px;
-    height: 35px;
-
-    background: url("../img/icon-video.svg") no-repeat;
-  }
 }
 
 .about-production__clip {
@@ -52,16 +47,33 @@
   margin-bottom: 30px;
 
   background: #b2aead url("../img/video-mobile@1x.jpg") no-repeat;
+
+  @media @retina {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
 }
 
 .about-production__clip-play {
   .abs-centrate();
 
-  .set-size(105px, 78px);
-
-  background: transparent url("../img/icon-play.svg") no-repeat;
+  background: transparent;
   border: none;
   cursor: pointer;
+}
+
+.about-production__clip-play-image {
+  fill: @ui-color-green;
+
+  // не пойму, почему не срабатывают псевдоклассы?
+  &:hover {
+    // fill: red;
+    width: 120%;
+  }
+
+  &:active {
+    fill: @ui-color-green-active;
+    width: 80%;
+  }
 }
 
 .about-production__intro {
@@ -90,20 +102,26 @@
     padding-bottom: 26px;
     padding-left: 65px;
     .set-font-params(@font-family-header, @tablet-font-size-big, 24px, 700);
+  }
 
-    &:before {
-      left: 10px;
-      top: 30px;
-    }
+  .about-production__image {
+    left: 10px;
+    top: 25px;
   }
 
   .about-production__clip {
     position: static;
     width: 100%;
-    min-height: 457px;
+    min-height: 453px;
     order: -1;
     background-size: 100%;
     margin-bottom: 0;
+
+    background-image: url("../img/video-tablet@1x.jpg");
+
+    @media @retina {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
   }
 
   .about-production__clip-play {
@@ -127,7 +145,7 @@
   .about-production {
     display: flex;
     margin-bottom: 100px;
-    min-height: 457px;
+    // min-height: 455px;
   }
 
   .about-production__info {
@@ -139,6 +157,12 @@
   .about-production__clip {
     width: 700px;
     margin-bottom: 0;
+
+    background-image: url("../img/video-desktop@1x.jpg");
+
+    @media @retina {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
   }
 
   .about-production__clip-play {
@@ -157,11 +181,11 @@
     padding-left: 0;
     padding-right: 20px;
     padding-top: 100px;
+  }
 
-    &:before {
-      left: 0px;
-      top: 40px;
-    }
+  .about-production__image {
+    left: 0px;
+    top: 40px;
   }
 
   .about-production__order-btn {

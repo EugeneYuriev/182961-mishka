@@ -5,7 +5,7 @@
 }
 
 .shop-catalog__item-link {
-  display: block;
+  display: flex;
   padding: 25px 30px;
   padding-top: 30px;
 
@@ -13,20 +13,22 @@
   .set-font-params(@font-family-shop-catalog, @font-size-bigger, 24px, 700);
   color: #ffffff;
 
-  background: #63d1bb;
+  background: @shop-catalog-interior-color;
 
   &:hover {
     transform: translateY(-5px);
+  }
+
+  &:hover .shop-catalog__item-image {
+    fill: @shop-catalog-item-image-hover-color;
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
 
-  &--interior {
-    background: @shop-catalog-interior-color url("../img/icon-interior.svg") no-repeat;
-    background-position-x: 90%;
-    background-position-y: center;
+  &:active .shop-catalog__item-image {
+    fill: @shop-catalog-item-image-active-color;
   }
 
   &--interior:hover {
@@ -34,9 +36,7 @@
   }
 
   &--toy {
-    background: @shop-catalog-toy-color url("../img/icon-toy.svg") no-repeat;
-    background-position-x: 90%;
-    background-position-y: center;
+    background: @shop-catalog-toy-color;
   }
 
   &--toy:hover {
@@ -50,11 +50,16 @@
   width: 130px;
 }
 
+.shop-catalog__item-image {
+  height: 62px;
+  margin-left: auto;
+  fill: @shop-catalog-item-image-color;
+}
+
 @media @tablet-widths {
   .shop-catalog {
     width: 100%;
     .content-wrapper(@tablet-margin-lr);
-
     font-size: 0;
   }
 

@@ -1,6 +1,8 @@
 .references {
-  .content-wrapper(@mobile-margin-lr);
+  position: relative;
+  .content-wrapper-pad(@mobile-margin-lr);
   margin-bottom: 85px;
+  .zigzag-line(6px, -50px);
 }
 
 .references__header {
@@ -38,46 +40,54 @@
 }
 
 .references__controls {
-  margin-bottom: 38px;
+  display: flex;
 
+  margin-bottom: 38px;
   font-size: 0;
 }
 
 .references__toggle {
-  display: inline-block;
+  display: flex;
   box-sizing: border-box;
   width: 50%;
   height: 50px;
 
   border: 1px solid @ui-color-grey;
-  background-color: transparent;
 
-  &--prev {
-    background: #ffffff url("../img/icon-left-arrow.svg") no-repeat;
-    background-position: center;
+  &:hover {
+    fill: @font-color-base-hover;
   }
 
-  &--next {
-    background: #ffffff url("../img/icon-right-arrow.svg") no-repeat;
-    background-position: center;
+  &:active {
+    fill: @font-color-base-active;
   }
+}
+
+.references__toggle-image {
+  margin: auto;
 }
 
 @media @tablet-widths {
   .references {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
 
     .reset-marg-pad();
-    margin-bottom: 100px;
+    margin-bottom: 140px;
     padding-top: 75px;
     padding-bottom: 100px;
 
     background: #ffffff url("../img/review@1x.jpg") no-repeat;
-    background-position: left;
+    // background-position: left;
     background-size: auto 100%;
 
+    @media @retina {
+      background-image: url("../img/review@2x.jpg");
+    }
+
+    .zigzag-line-size(17px, -85px);
   }
 
   .references__header {
@@ -126,8 +136,10 @@
 
 @media @desktop-widths {
   .references {
-    .content-wrapper(@desktop-margin-lr);
-    margin-bottom: 110px;
+    .content-wrapper-pad(@desktop-margin-lr);
+    margin-bottom: 150px;
+
+    .zigzag-line-size(26px, -90px);
   }
 
   .references__header {
