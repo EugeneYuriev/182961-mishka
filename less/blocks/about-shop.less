@@ -1,6 +1,6 @@
 .about-shop {
   .content-wrapper(@mobile-margin-lr);
-  margin-bottom: 65px;
+  margin-bottom: 55px;
 }
 
 .about-shop__title {
@@ -18,18 +18,20 @@
 .about-shop__item {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .about-shop__item-image {
   fill: @ui-color-green;
-  margin-bottom: 25px;
+  margin-left: 10px;
+  margin-bottom: 15px;
 }
 
 @media @tablet-widths {
   .about-shop {
     .content-wrapper(@tablet-margin-lr);
-    margin-bottom: 85px;
+    margin-bottom: 75px;
   }
 
   .about-shop__title {
@@ -44,8 +46,9 @@
   .about-shop__item {
     box-sizing: border-box;
     width: 50%;
+    margin-bottom: 5px;
     padding-right: 80px;
-    padding-top: 105px;
+    padding-top: 20px;
 
     font-size: @tablet-font-size-bigger;
     line-height: 24px;
@@ -57,8 +60,8 @@
   }
 
   .about-shop__item-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 40px;
   }
 }
 

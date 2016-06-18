@@ -2,6 +2,7 @@ var navMain = document.querySelector('.main-nav');
 var navUser = document.querySelector('.user-nav');
 var navToggle = document.querySelector('.page-header__toggle');
 
+
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains('main-nav--closed')) {
     navMain.classList.remove('main-nav--closed');
@@ -10,7 +11,7 @@ navToggle.addEventListener('click', function() {
   } else {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
-    navToggle.style.backgroundImage='url(img/icon-menu-open.svg)';
+    navToggle.style.backgroundImage='url(img/icon-menu-open.svg)';    
   }
   if (navUser.classList.contains('user-nav--closed')) {
     navUser.classList.remove('user-nav--closed');

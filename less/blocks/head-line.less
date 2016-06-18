@@ -9,12 +9,24 @@
     padding-top: 85px;
     padding-left: 40px;
     padding-right: 40px;
+
+    background: #fafafa url("../img/hero-mobile@1x.jpg") no-repeat;
+    background-position-x: center;
+
+    @media @retina-mobile {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 575px 373px;
+    }
   }
 
   &--inner-page{
     padding: 73px 0;
 
     background: @headline-color;
+  }
+
+  &--form {
+    padding: 78px 0;
   }
 }
 
@@ -29,6 +41,14 @@
       padding-top: 80px;
       padding-left: 130px;
       padding-right: 130px;
+
+      background-image: url("../img/hero-desktop@1x.jpg");
+      background-position-y: -70px;
+
+      @media @retina-tablet {
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: 1150px 746px;
+      }
     }
 
     &--inner-page {
@@ -47,6 +67,7 @@
       padding-top: 110px;
       padding-left: 260px;
       padding-right: 260px;
+      background-position-y: -40px;
     }
 
     &--inner-page {

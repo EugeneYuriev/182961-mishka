@@ -7,7 +7,9 @@
 @mobile-widths-only: ~"(max-width: 767px)";
 @tablet-widths: ~"(min-width: 768px)";
 @desktop-widths: ~"(min-width: 1150px)";
-@retina: ~"(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+@retina-mobile: ~"(min-resolution: 144dpi) and (max-width: 767px), (min-resolution: 1.5dppx) and (max-width: 767px)";
+@retina-tablet: ~"(min-resolution: 144dpi) and (min-width: 768px), (min-resolution: 1.5dppx) and (min-width: 768px)";
+@retina-desktop: ~"(min-resolution: 144dpi) and (min-width: 1150px), (min-resolution: 1.5dppx) and (min-width: 1150px)";
 
 @ui-color-green: #63d1bb;
 @ui-color-link-hover: rgba(70, 193, 174, 1);

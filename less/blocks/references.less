@@ -74,26 +74,28 @@
     flex-wrap: wrap;
     align-items: flex-start;
 
+    box-sizing: border-box;
     .reset-marg-pad();
-    margin-bottom: 140px;
+    margin-bottom: 105px;
     padding-top: 75px;
     padding-bottom: 100px;
 
     background: #ffffff url("../img/review@1x.jpg") no-repeat;
-    // background-position: left;
     background-size: auto 100%;
+    background-size: 350px 457px;
 
-    @media @retina {
+    @media @retina-tablet {
       background-image: url("../img/review@2x.jpg");
+      background-size: 350px 457px;
     }
 
-    .zigzag-line-size(17px, -85px);
+    .zigzag-line-size(17px, -50px);
   }
 
   .references__header {
     order: -1;
     margin-left: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
   }
@@ -104,11 +106,16 @@
     padding-right: 20px;
   }
 
+  .references__item-text {
+    margin-bottom: 10px;
+  }
+
   .references__write-btn {
     order: -1;
     width: 175px;
     margin-left: auto;
     margin-right: 50px;
+    margin-top: 5px;
   }
 
   .references__item-author {
@@ -137,12 +144,14 @@
 @media @desktop-widths {
   .references {
     .content-wrapper-pad(@desktop-margin-lr);
-    margin-bottom: 150px;
+    margin-bottom: 125px;
 
-    .zigzag-line-size(26px, -90px);
+    background-position-x: 50px;
+    .zigzag-line-size(26px, -55px);
   }
 
   .references__header {
+    margin-bottom: 30px;
     margin-left: 175px;
     .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
   }

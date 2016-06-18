@@ -1,5 +1,5 @@
 .product {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   outline: 1px solid #ededed;
 
   &:hover .product__data {
@@ -16,12 +16,13 @@
 }
 
 .product__data {
-  padding: 0 22px;
+  padding: 0 27px;
   padding-top: 10px;
   font-size: 0;
 }
 
 .product__name {
+  margin-bottom: 5px;
   .set-font-params(@font-family-header, @font-size-big, 24px, 700);
   text-align: left;
 }
@@ -42,7 +43,7 @@
 .product__params {
   margin-bottom: 15px;
 
-  .set-font-params(@font-family-header, @font-size-normal, 30px, 400);
+  .set-font-params(@font-family-plain-text, @font-size-normal, 30px, 400);
   color: #444444;
 }
 
@@ -139,6 +140,7 @@
     align-items: stretch;
     width: 30%;
     margin-right: 5%;
+    margin-bottom: 60px;
   }
 
   .product:nth-child(3n) {

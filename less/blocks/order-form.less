@@ -10,7 +10,11 @@
 
 .order-form__param-group {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
+
+  &--contacts {
+    margin-bottom: 34px;
+  }
 
   &:before {
     content: "";
@@ -18,20 +22,29 @@
     top: 10px;
     right: 0;
 
-    width: 75%;
+    width: 100%;
     height: 1px;
     background-color: @ui-color-green;
-
   }
 }
 
 .order-form__param-group-title {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
   .reset-marg-pad();
   margin-bottom: 30px;
+  padding-right: 20px;
 
   .set-font-params(@font-family-plain-text, 17px, 17px, 700);
   color: @ui-color-green;
   text-transform: uppercase;
+  background: #ffffff;
+}
+
+.order-form__param-group--tel  .order-form__param-group-title,
+.order-form__param-group--email  .order-form__param-group-title {
+  margin-bottom: 10px;
 }
 
 .order-form__radio-label,
@@ -52,6 +65,7 @@
     .abs-centrateY();
 
     .set-size(40px, 40px);
+    box-sizing: border-box;
 
     border: 2px solid @border-color;
     border-radius: 50%;
@@ -68,6 +82,7 @@
 }
 
 .order-form__checkbox-label {
+
   padding-top: 2px;
   margin-bottom: 45px;
 
@@ -75,6 +90,7 @@
     .abs-centrateY();
 
     .set-size(40px, 40px);
+    box-sizing: border-box;
 
     border: 2px solid @border-color;
     cursor: pointer;
@@ -106,11 +122,12 @@
 
 .order-form__checkbox-input:checked + .order-form__checkbox-label::after {
   .abs-centrateY();
-  left: 5px;
+  left: 7px;
 
-  .set-size(35px, 23px);
+  .set-size(30px, 18px);
 
   background: transparent url("../img/icon-tick.svg") no-repeat;
+  background-size: contain;
 }
 
 .order-form__label {
@@ -121,12 +138,13 @@
 
 .order-form__input {
   position: relative;
+  z-index: 10;
   display: block;
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 20px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 
   .set-font-params(@font-family-header, 17px, 19px, 400);
 
@@ -208,7 +226,7 @@
   }
 
   .order-form__intro {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 0;
     padding: 0 @tablet-margin-lr;
   }
@@ -216,6 +234,7 @@
   .order-form__param-group {
     width: 100%;
     display: flex;
+    align-items: flex-start;
     .reset-marg-pad();
     padding-top: 70px;
     padding-bottom: 25px;
@@ -223,12 +242,26 @@
     &:before {
       display: none;
     }
+
+    &--color {
+      padding-bottom: 15px;
+    }
+
+    &--contacts {
+      padding-top: 65px;
+      padding-bottom: 35px;
+    }
+
+    &--extra-info  .order-form__param-group-title{
+      padding-top: 15px;
+    }
   }
 
   .order-form__param-group-title {
     box-sizing: border-box;
     width: 217px;
     padding-left: @tablet-margin-lr;
+    background: none;
   }
 
   .order-form__param-group-data {
@@ -264,25 +297,26 @@
   }
 
   .order-form__radio-input:checked + .order-form__radio-label::after {
-    left: 16px;
-    .set-size(22px, 22px);
+    left: 15px;
+    .set-size(20px, 20px);
   }
 
   .order-form__checkbox-label {
     box-sizing: border-box;
     width: 50%;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     padding-left: 80px;
 
     .set-font-params(@font-family-header, @tablet-font-size-big, 18px, 700);
 
     &::before {
-      .set-size(50px, 50px);
+      .set-size(54px, 54px);
     }
   }
 
   .order-form__checkbox-input:checked + .order-form__checkbox-label::after {
     left: 10px;
+    .set-size(35px, 23px);
   }
 
   .order-form__input-wrapper {
@@ -302,10 +336,10 @@
     box-sizing: border-box;
     width: auto;
     margin-left: 23px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     padding-top: 0;
     padding-left: 17px;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
 
     background-color: transparent;
 
@@ -314,17 +348,22 @@
     &--text {
       width: 100%;
       margin-left: 0;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+    }
+
+    &--email {
+      margin-bottom: 35px;
     }
 
     &--text {
       margin-bottom: 20px;
-      padding: 15px;
+      padding: 10px 15px;
     }
   }
 
   .order-form__input-image {
     top: 0;
+    right: 20px;
   }
 
   .order-form__order-btn {
@@ -355,6 +394,16 @@
     padding-left: 225px;
   }
 
+  .order-form__param-group {
+    &--color {
+      padding-bottom: 20px;
+    }
+
+    // &--email {
+    //   padding-bottom: 15px;
+    // }
+  }
+
   .order-form__param-group-title {
     width: 225px;
     padding-left: 113px;
@@ -369,15 +418,14 @@
   }
 
   .order-form__checkbox-label {
-    width: 33%;
+    width: 33.33%;
     margin-bottom: 60px;
   }
 
   .order-form__input {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
-    &--tel,
-    &--email {
+    &--tel {
       margin-bottom: 40px;
     }
 
