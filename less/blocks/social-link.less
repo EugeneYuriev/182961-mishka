@@ -1,19 +1,18 @@
 .social-link {
   display: inline-block;
-  width: 32px;
-  padding-right: 15px;
-  height: 32px;
   font-size: 0;
 
-  &--ig {
-    background: #f1f1f1 url("../img/icon-insta.svg") no-repeat;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-link__image {
+  &:hover {
+    fill: @ui-color-link-hover;
   }
 
-  &--fb {
-    background: #f1f1f1 url("../img/icon-fb.svg") no-repeat;
-  }
-
-  &--tw {
-    background: #f1f1f1 url("../img/icon-twitter.svg") no-repeat;
+  &:active {
+    fill: @ui-color-link-active;
   }
 }

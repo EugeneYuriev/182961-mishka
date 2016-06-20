@@ -1,6 +1,6 @@
 .about-shop {
   .content-wrapper(@mobile-margin-lr);
-  margin-bottom: 65px;
+  margin-bottom: 55px;
 }
 
 .about-shop__title {
@@ -16,39 +16,22 @@
 }
 
 .about-shop__item {
-  padding-top: 82px;
-  background-position: 10px 35px;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
 
-  &--feature-flower {
-    background-image: url("../img/icon-feature-flower.svg");
-  }
-
-  &--feature-threads {
-    background-image: url("../img/icon-feature-threads.svg");
-  }
-
-  &--feature-rectangle {
-    background-image: url("../img/icon-feature-rectangle.svg");
-  }
-
-  &--feature-rocket {
-    background-image: url("../img/icon-feature-rocket.svg");
-  }
-
-  &--feature-heart {
-    background-image: url("../img/icon-feature-heart.svg");
-  }
-
-  &--feature-gift {
-    background-image: url("../img/icon-feature-gift.svg");
-  }
+.about-shop__item-image {
+  fill: @ui-color-green;
+  margin-left: 10px;
+  margin-bottom: 15px;
 }
 
 @media @tablet-widths {
   .about-shop {
     .content-wrapper(@tablet-margin-lr);
-    margin-bottom: 85px;
+    margin-bottom: 75px;
   }
 
   .about-shop__title {
@@ -63,8 +46,9 @@
   .about-shop__item {
     box-sizing: border-box;
     width: 50%;
+    margin-bottom: 5px;
     padding-right: 80px;
-    padding-top: 105px;
+    padding-top: 20px;
 
     font-size: @tablet-font-size-bigger;
     line-height: 24px;
@@ -73,6 +57,11 @@
 
   .about-shop__item:nth-child(2n) {
     padding-right: 0;
+  }
+
+  .about-shop__item-image {
+    width: 50px;
+    height: 40px;
   }
 }
 

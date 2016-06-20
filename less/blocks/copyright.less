@@ -1,5 +1,6 @@
 .copyright {
   padding: 25px;
+  padding-top: 15px;
 }
 
 .copyright__link {
@@ -11,18 +12,27 @@
   color: @font-color-base;
   .set-font-params(@font-family-header, @font-size-bigger, 18px, 700);
 
-  &:active .copyright-text {
+  &:hover .copyright__logo {
+    fill: @ui-color-link-hover;
+  }
+
+  &:active .copyright__text {
     color: @font-color-base-active;
+  }
+
+  &:active .copyright__logo {
+    fill: @ui-color-link-active;
   }
 }
 
 .copyright__logo {
   padding-left: 26px;
+  fill: @ui-color-green;
 }
 
 @media @tablet-widths {
   .copyright {
-    padding: 60px 0;
+    padding: 50px 0;
     margin-right: @tablet-margin-lr;
   }
 }
