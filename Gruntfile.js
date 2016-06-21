@@ -1,47 +1,90 @@
 "use strict";
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks("grunt-contrib-less");
-  grunt.loadNpmTasks("grunt-browser-sync");
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-postcss");
+
+  require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
     less: {
       style: {
         files: {
-          "css/style.css": "less/style.less"
+          "build/css/style.css": "less/style.less"
         }
       }
     },
-
     postcss: {
       style: {
         options: {
           processors: [
-            require("autoprefixer")({browsers: [
-              "last 1 version",
-              "last 2 Chrome versions",
-              "last 2 Firefox versions",
-              "last 2 Opera versions",
-              "last 2 Edge versions"
-            ]})
+            require("autoprefixer")({
+              browsers: [
+                "last 1 version",
+                "last 2 Chrome versions",
+                "last 2 Firefox versions",
+                "last 2 Opera versions",
+                "last 2 Edge versions"
+              ]}),
+            require("css-mqpacker")({
+              sort: true
+            })
           ]
         },
-        src: "css/*.css"
+        src: "build/css/*.css"
       }
     },
-
+    csso: {
+      style: {
+        options: {
+          report: "gzip"
+        },
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+    svgmin: {
+      symbols: {
+        files: [{
+          expand: true,
+          // src: ["img/icons/*.svg"]
+          src: ["build/img/*.svg"]
+        }]
+      }
+    },
+    svgstore: {
+      options: {
+        svg: {
+          style: "display: none"
+        }
+      },
+      symbols: {
+        files: {
+          // "img/symbols.svg": ["img/icons/*.svg"]
+          "build/img/symbols.svg": ["img/*.svg"]
+        }
+      }
+    },
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ["build/img/**/*.{png,jpg,gif}"]
+        }]
+      }
+    },
     browserSync: {
       server: {
         bsFiles: {
           src: [
-            "*.html",
-            "css/*.css"
+            "build/*.html",
+            "build/css/*.css"
           ]
         },
         options: {
-          server: ".",
+          server: "build/.",
           watchTask: true,
           notify: false,
           open: true,
@@ -49,17 +92,56 @@ module.exports = function(grunt) {
         }
       }
     },
-
     watch: {
+      html: {
+        files: ["*.html"],
+        tasks: ["copy:html"]
+      },
       style: {
         files: ["less/**/*.less"],
-        tasks: ["less", "postcss"],
+        tasks: ["less", "postcss", "csso"],
         options: {
           spawn: false
         }
       }
+    },
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          src: [
+            "fonts/**/*.{woff,woff2}",
+            "img/**",
+            "js/**",
+            "*.html"
+          ],
+          dest: "build"
+        }]
+      },
+      html: {
+        files: [{
+          expand: true,
+          src: ["*.html"],
+          dest: "build"
+        }]
+      }
+    },
+    clean: {
+      build: ["build"]
     }
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
+
+  grunt.registerTask("build", [
+    "clean",
+    "copy",
+    "less",
+    "postcss",
+    "csso",
+    "symbols",
+    "imagemin"
+  ]);
+
 };
