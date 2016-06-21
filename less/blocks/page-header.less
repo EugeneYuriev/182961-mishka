@@ -58,15 +58,23 @@
   right: 30px;
   transform: translateY(-50%);
 
-  .set-size(20px, 20px);
+  .set-size(22px, 22px);
   .reset-marg-pad();
 
   border: none;
-  background: transparent url("../img/icon-menu-open.svg") no-repeat;
+  background: transparent url("../img/icon-menu-close.svg") no-repeat;
 }
 
 .page-header__delivery-info {
   display: none;
+}
+
+@media @mobile-widths-only {
+  .page-header__toggle {
+    &--nojs {
+      display: none;
+    }
+  }
 }
 
 @media @tablet-widths {
