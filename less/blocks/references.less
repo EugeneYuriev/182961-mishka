@@ -1,7 +1,7 @@
 .references {
   position: relative;
   .content-wrapper-pad(@mobile-margin-lr);
-  margin-bottom: 85px;
+  margin-bottom: 87px;
   .zigzag-line(6px, -50px);
 }
 
@@ -12,13 +12,9 @@
   .set-font-params(@font-family-header, @font-size-large, 30px, 700);
 }
 
-.references__item {
-  .reset-marg-pad();
-  margin-bottom: 20px;
-}
-
 .references__item-text {
   line-height: 30px;
+  margin-bottom: 20px;
 }
 
 .references__item-author {
@@ -64,6 +60,7 @@
 }
 
 .references__toggle-image {
+  .set-size(50px, 26.003px);
   margin: auto;
 }
 
@@ -100,14 +97,10 @@
     .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
   }
 
-  .references__item {
-    margin-left: 50px;
-    margin-bottom: 0;
-    padding-right: 20px;
-  }
-
   .references__item-text {
+    margin-left: 50px;
     margin-bottom: 10px;
+    padding-right: 20px;
   }
 
   .references__write-btn {
@@ -156,7 +149,7 @@
     .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
   }
 
-  .references__item {
+  .references__item-text {
     width: 700px;
     margin-left: 175px;
   }

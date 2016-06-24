@@ -1,5 +1,6 @@
 .social-link {
   display: inline-block;
+  vertical-align: top;
   font-size: 0;
 
   &:last-child {
@@ -8,6 +9,19 @@
 }
 
 .social-link__image {
+
+  &--insta {
+    .set-size(21.769px, 21.334px);
+  }
+
+  &--fb {
+    .set-size(14.962px, 27.718px);
+  }
+
+  &--twitter {
+    .set-size(23.494px, 20.168px);
+  }
+
   &:hover {
     fill: @ui-color-link-hover;
   }

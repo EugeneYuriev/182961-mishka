@@ -1,6 +1,6 @@
 .about-shop {
   .content-wrapper(@mobile-margin-lr);
-  margin-bottom: 55px;
+  margin-bottom: 57px;
 }
 
 .about-shop__title {
@@ -16,17 +16,58 @@
 }
 
 .about-shop__item {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  position: relative;
+  display: block;
 }
 
 .about-shop__item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   fill: @ui-color-green;
-  margin-left: 10px;
-  margin-bottom: 15px;
+
+  &--flower {
+    top: 30px;
+    left: 10px;
+    .set-size(31.972px, 37.301px);
+  }
+
+  &--rectangle {
+    top: 30px;
+    .set-size(46.575px, 27.332px);
+  }
+
+  &--heart {
+    top: 35px;
+    left: 5px;
+    .set-size(33.05px, 27.857px);
+  }
+
+  &--threads {
+    top: 35px;
+    left: 5px;
+    .set-size(34.373px, 34.373px);
+  }
+
+  &--rocket {
+    top: 35px;
+    left: -5px;
+    .set-size(54.156px, 23.183px);
+  }
+
+  &--gift {
+    top: 30px;
+    left: 5px;
+    .set-size(32.666px, 32.486px);
+  }
 }
+
+.about-shop__item-text {
+  display: block;
+  padding-top: 83px;
+}
+
 
 @media @tablet-widths {
   .about-shop {
@@ -47,12 +88,31 @@
     box-sizing: border-box;
     width: 50%;
     margin-bottom: 5px;
-    padding-right: 80px;
     padding-top: 20px;
 
     font-size: @tablet-font-size-bigger;
     line-height: 24px;
     background-position-y: 55px;
+
+    &:nth-child(4) {
+      order: 2;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(5) {
+      order: 4;
+    }
+
+    &:nth-child(3) {
+      order: 5;
+    }
+
+    &:nth-child(6) {
+      order: 6;
+    }
   }
 
   .about-shop__item:nth-child(2n) {
@@ -60,8 +120,42 @@
   }
 
   .about-shop__item-image {
-    width: 50px;
-    height: 40px;
+    top: 50px;
+    width: 40px;
+    height: 30px;
+
+    &--flower {
+      left: 0;
+      width: 50px;
+      height: 40px;
+    }
+
+    &--rectangle {
+      width: 50px;
+    }
+
+    &--heart {
+      top: 55px;
+    }
+
+    &--threads {
+      left: 0;
+      height: 35px;
+    }
+
+    &--rocket {
+      width: 50px;
+    }
+
+    &--gift {
+      left: 0;
+      top: 55px;
+    }
+  }
+
+  .about-shop__item-text {
+    width: 100%;
+    padding-top: 82px;
   }
 }
 
@@ -73,7 +167,7 @@
 
   .about-shop__title {
     .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
-    margin-left: 175px;
+    margin-left: 170px;
   }
 
   .about-shop__list {

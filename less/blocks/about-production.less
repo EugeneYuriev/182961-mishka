@@ -42,7 +42,7 @@
   display: block;
 
   .set-size(260px, 150px);
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
   background: #b2aead url("../img/video-mobile@1x.jpg") no-repeat;
 
@@ -64,8 +64,7 @@
 }
 
 .about-production__clip-play-image {
-  width: 100px;
-  height: 80px;
+  .set-size(100px, 76px);
   margin: auto;
 
   fill: @ui-color-green;
@@ -94,6 +93,7 @@
   width: 190px;
   margin: 0 auto;
   margin-bottom: 35px;
+  padding: 16px;
 }
 
 @media @tablet-widths {
@@ -103,6 +103,7 @@
   }
 
   .about-production__title {
+    box-sizing: border-box;
     width: 100%;
     .reset-marg-pad();
     margin-bottom: 30px;
@@ -131,7 +132,7 @@
   }
 
   .about-production__clip-play {
-    top: 240px;
+    top: 230px;
   }
 
   .about-production__intro {
@@ -142,8 +143,8 @@
   }
 
   .about-production__order-btn {
-    width: 580px;
-    margin-top: auto;
+    width: 585px;
+    // margin-top: auto;
     margin-bottom: 45px;
     margin-left: 40px;
     margin-right: 40px;
@@ -188,10 +189,10 @@
   }
 
   .about-production__title {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
     padding-left: 0;
     padding-right: 80px;
-    padding-top: 95px;
+    padding-top: 92px;
 
     &:before {
       left: 0px;
@@ -200,13 +201,11 @@
   }
 
   .about-production__intro {
-    margin-bottom: 0;
+    margin-bottom: 45px;
   }
 
   .about-production__order-btn {
     width: 230px;
-    margin-top: auto;
-    margin-bottom: 60px;
     margin-left: 0;
     margin-right: 58px;
   }

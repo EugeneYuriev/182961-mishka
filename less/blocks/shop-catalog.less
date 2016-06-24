@@ -78,18 +78,19 @@
 
 @media @tablet-widths {
   .shop-catalog {
+    display: flex;
+    align-items: stretch;
     width: 100%;
     .content-wrapper(@tablet-margin-lr);
-
-    font-size: 0;
   }
 
   .shop-catalog__item {
-    display: inline-block;
+    display: flex;
     width: 50%;
   }
 
   .shop-catalog__item-link {
+    width: 100%;
     padding-left: 35px;
     .set-font-params(@font-family-shop-catalog, @tablet-font-size-bigger, 30px, 700);
 
@@ -107,6 +108,5 @@
 @media @desktop-widths {
   .shop-catalog {
     .content-wrapper(@desktop-margin-lr);
-    // margin-bottom: 150px;
   }
 }

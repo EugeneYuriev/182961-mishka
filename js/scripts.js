@@ -3,6 +3,12 @@ var navUser = document.querySelector(".user-nav");
 var navToggle = document.querySelector(".page-header__toggle");
 
 navToggle.classList.remove("page-header__toggle--nojs");
+navMain.classList.add("main-nav--closed");
+navMain.classList.remove("main-nav--opened");
+navToggle.style.backgroundImage="url(img/icon-menu-open.svg)";
+navUser.classList.add("user-nav--closed");
+navUser.classList.remove("user-nav--opened");
+
 
 navToggle.addEventListener("click", function() {
   if (navMain.classList.contains("main-nav--closed")) {
@@ -23,22 +29,31 @@ navToggle.addEventListener("click", function() {
   }
 });
 
-// Создание обработчика для события window.onLoad
-YMaps.jQuery(function () {
-  // Создание экземпляра карты и его привязка к созданному контейнеру
-  var map = new YMaps.Map(YMaps.jQuery("#yandex-map")[0]);
-  map.setCenter(new YMaps.GeoPoint(30.323054, 59.938631), 17);
-  map.addControl(new YMaps.ToolBar());
-  map.addControl(new YMaps.Zoom());
 
-  // Создание стиля для значка метки
-  var s = new YMaps.Style();
-  s.iconStyle = new YMaps.IconStyle();
-  s.iconStyle.href = "img/icon-map-pin.svg";
-  s.iconStyle.size = new YMaps.Point(70, 100);
-  s.iconStyle.offset = new YMaps.Point(-35, -100);
+if(document.querySelector("#yandex-map")) {
+  ymaps.ready(function () {
+      var myMap = new ymaps.Map('yandex-map', {
+              center: [59.938631, 30.323054],
+              zoom: 17
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'Мишка - Милые штуки ручной работы для дома',
+              balloonContent: 'Мишка'
+          }, {
+              // Опции:
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: 'img/icon-map-pin.svg',
+              // Размеры метки.
+              iconImageSize: [70, 100],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-35, -100]
+          });
 
-  // Создание метки и добавление ее на карту
-  var placemark = new YMaps.Placemark(map.getCenter(), {style: s});
-  map.addOverlay(placemark);
-});
+      myMap.geoObjects.add(myPlacemark);
+  });
+}

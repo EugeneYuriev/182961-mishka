@@ -10,6 +10,10 @@
   display: none;
 }
 
+.page-footer__logo-image {
+  .set-size(101.615px, 34.056px);
+}
+
 .page-footer--inner-page  .page-footer__logo-image {
 
   &:hover {
@@ -23,19 +27,21 @@
 
 @media @tablet-widths {
   .page-footer {
+    min-height: 145px;
     .site-wrapper(@tablet-width);
     justify-content: space-between;
+    align-items: center;
   }
 
   .page-footer__logo {
     display: block;
-    margin: 45px 50px;
+    margin-left: @tablet-margin-lr;
+    margin-right: 80px;
   }
 }
 
 @media @desktop-widths {
   .page-footer {
     .site-wrapper(@desktop-width);
-    padding-top: 5px;
   }
 }

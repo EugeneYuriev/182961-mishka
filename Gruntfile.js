@@ -42,25 +42,31 @@ module.exports = function(grunt) {
         }
       }
     },
+    uglify: {
+      my_target: {
+        files: {
+          'build/js/scripts.min.js': ['build/js/scripts.js']
+        }
+      }
+    },
     svgmin: {
       symbols: {
         files: [{
           expand: true,
-          // src: ["img/icons/*.svg"]
-          src: ["build/img/*.svg"]
+          src: ["build/img/*.svg", "build/img/inline/*.svg"]
         }]
       }
     },
     svgstore: {
       options: {
+        // cleanup: ['fill', 'style'],
         svg: {
           style: "display: none"
         }
       },
       symbols: {
         files: {
-          // "img/symbols.svg": ["img/icons/*.svg"]
-          "build/img/symbols.svg": ["img/*.svg"]
+          "build/img/inline/symbols.svg": ["img/inline/*.svg"]
         }
       }
     },
@@ -80,7 +86,8 @@ module.exports = function(grunt) {
         bsFiles: {
           src: [
             "build/*.html",
-            "build/css/*.css"
+            "build/css/*.css",
+            "build/js/*.js"
           ]
         },
         options: {
@@ -94,8 +101,8 @@ module.exports = function(grunt) {
     },
     watch: {
       html: {
-        files: ["*.html"],
-        tasks: ["copy:html"]
+        files: ["*.html","js/**"],
+        tasks: ["copy:html", "uglify"]
       },
       style: {
         files: ["less/**/*.less"],
@@ -121,7 +128,7 @@ module.exports = function(grunt) {
       html: {
         files: [{
           expand: true,
-          src: ["*.html"],
+          src: ["*.html","js/**"],
           dest: "build"
         }]
       }
@@ -140,6 +147,7 @@ module.exports = function(grunt) {
     "less",
     "postcss",
     "csso",
+    "uglify",
     "symbols",
     "imagemin"
   ]);

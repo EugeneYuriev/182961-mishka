@@ -12,8 +12,16 @@
   position: relative;
   margin-bottom: 30px;
 
+  &--color {
+    margin-bottom: 35px;
+  }
+
   &--contacts {
     margin-bottom: 34px;
+  }
+
+  &--tel {
+    margin-bottom: 45px;
   }
 
   &:before {
@@ -32,6 +40,7 @@
   position: relative;
   z-index: 10;
   display: inline-block;
+  vertical-align: top;
   .reset-marg-pad();
   margin-bottom: 30px;
   padding-right: 20px;
@@ -67,7 +76,7 @@
 }
 
 .order-form__radio-label {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   padding-top: 10px;
   padding-bottom: 12px;
 
@@ -146,7 +155,7 @@
 
   .set-size(30px, 18px);
 
-  background: transparent url("../img/icon-tick.svg") no-repeat;
+  background: #ffffff url("../img/icon-tick.svg") no-repeat;
   background-size: contain;
 }
 
@@ -170,9 +179,9 @@
   display: block;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   padding-top: 20px;
-  padding-bottom: 18px;
+  padding-bottom: 15px;
 
   .set-font-params(@font-family-header, 17px, 19px, 400);
 
@@ -230,7 +239,12 @@
   position: absolute;
   top: 15px;
   right: 10px;
+  .set-size(32px, 32px);
   fill: @menu-item-image-color;
+
+  &--tel {
+    .set-size(25px, 25px);
+  }
 }
 
 .order-form__order-btn {
@@ -254,9 +268,10 @@
   }
 
   .order-form__intro {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-top: 0;
     padding: 0 @tablet-margin-lr;
+    line-height: 30px;
   }
 
   .order-form__param-group {
@@ -273,12 +288,25 @@
 
     &--color {
       padding-top: 55px;
-      padding-bottom: 15px;
+      padding-bottom: 35px;
     }
 
     &--contacts {
       padding-top: 65px;
       padding-bottom: 35px;
+    }
+
+    &--tel {
+      padding-bottom: 0;
+    }
+
+    &--email {
+      padding-top: 0;
+      padding-bottom: 30px;
+    }
+
+    &--even {
+      background: @headline-color;
     }
 
     &--contacts  .order-form__param-group-title {
@@ -309,21 +337,6 @@
     flex-wrap: wrap;
   }
 
-
-
-  .order-form__param-group:nth-child(5){
-    padding-bottom: 0;
-  }
-
-  .order-form__param-group:nth-child(6){
-    padding-top: 0;
-    padding-bottom: 30px;
-  }
-
-  .order-form__param-group--even {
-    background: @headline-color;
-  }
-
   .order-form__radio-label {
     width: 470px;
     margin-bottom: 28px;
@@ -346,7 +359,7 @@
   .order-form__checkbox-label {
     box-sizing: border-box;
     width: 47%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding-top: 18px;
     padding-bottom: 18px;
     padding-left: 80px;
@@ -361,6 +374,7 @@
   .order-form__checkbox-input:checked + .order-form__checkbox-label::after {
     left: 10px;
     .set-size(35px, 23px);
+    background-color: @headline-color;
   }
 
   .order-form__input-wrapper {
@@ -380,10 +394,10 @@
     box-sizing: border-box;
     width: auto;
     margin-left: 23px;
-    margin-bottom: 35px;
+    margin-bottom: 37px;
     padding-top: 0;
     padding-left: 17px;
-    padding-bottom: 18px;
+    padding-bottom: 16px;
 
     background-color: transparent;
 
@@ -396,7 +410,7 @@
     }
 
     &--email {
-      margin-bottom: 35px;
+      margin-bottom: 33px;
     }
 
     &--text {
@@ -406,7 +420,7 @@
   }
 
   .order-form__input-image {
-    top: 0;
+    top: -5px;
     right: 20px;
   }
 
@@ -434,7 +448,7 @@
 
   .order-form__intro {
     width: 700px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-left: 225px;
   }
 
@@ -442,11 +456,29 @@
     &--color {
       padding-bottom: 28px;
     }
+
+    &--contacts {
+      margin-bottom: 0px;
+      padding-bottom: 25px;
+    }
+
+    &--tel {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 
   .order-form__param-group-title {
     width: 225px;
     padding-left: 113px;
+  }
+
+  .order-form__param-group--tel  .order-form__param-group-title {
+    padding-top: 5px;
+  }
+
+  .order-form__param-group--email  .order-form__param-group-title {
+    padding-left: 105px;
   }
 
   .order-form__param-group-data {
@@ -463,15 +495,20 @@
   }
 
   .order-form__input {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 
     &--tel {
       margin-bottom: 40px;
+      padding-bottom: 20px;
     }
 
     &--text {
-      margin-bottom: 55px;
+      margin-bottom: 65px;
     }
+  }
+
+  .order-form__input-image {
+    right: 5px;
   }
 
   .order-form__order-btn {
