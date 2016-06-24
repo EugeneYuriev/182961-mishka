@@ -32,21 +32,21 @@ navToggle.addEventListener("click", function() {
 
 if(document.querySelector("#yandex-map")) {
   ymaps.ready(function () {
-      var myMap = new ymaps.Map('yandex-map', {
+      var myMap = new ymaps.Map("yandex-map", {
               center: [59.938631, 30.323054],
               zoom: 17
           }, {
-              searchControlProvider: 'yandex#search'
+              searchControlProvider: "yandex#search"
           }),
           myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-              hintContent: 'Мишка - Милые штуки ручной работы для дома',
-              balloonContent: 'Мишка'
+              hintContent: "Мишка - Милые штуки ручной работы для дома",
+              balloonContent: "Мишка"
           }, {
               // Опции:
               // Необходимо указать данный тип макета.
-              iconLayout: 'default#image',
+              iconLayout: "default#image",
               // Своё изображение иконки метки.
-              iconImageHref: 'img/icon-map-pin.svg',
+              iconImageHref: "img/icon-map-pin.svg",
               // Размеры метки.
               iconImageSize: [70, 100],
               // Смещение левого верхнего угла иконки относительно
